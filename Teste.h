@@ -94,4 +94,18 @@ public:
     void testeInvalido() override;
 };
 
+class UTEstado : public UnidadeTeste {
+private:
+    Dominio* instancia;
+    string const VALOR_VALIDO = "Inadimplente";
+    string const VALOR_INVALIDO = "Imprevisto";
+    ~UTEstado() {delete instancia;};
+public:
+    UTEstado(Dominio* instancia) : instancia(instancia) {estado = SUCESSO;};
+    void testeValido() override;
+    void testeInvalido() override;
+};
+
+//---------------------------------------------------------------------------------------------------
+
 #endif // TESTE_H

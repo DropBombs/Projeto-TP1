@@ -1,5 +1,6 @@
 #include "Dominios.h"
 #include "Teste.h"
+#include "Entidades.h"
 
 using namespace std;
 
@@ -14,7 +15,8 @@ Dominio* criarDominio(const string& tipo) {
         {"CodigoDePagamento", []() {return new CodigoDePagamento();}},
         {"CodigoDeTitulo", []() {return new CodigoDeTitulo();}},
         {"Cpf", []() {return new Cpf();}},
-        {"Data", []() {return new Data();}}
+        {"Data", []() {return new Data();}},
+        {"Estado", []() {return new Estado();}}
         /// Adicionar outros dominios.
     };
 
@@ -42,6 +44,8 @@ UnidadeTeste* criarUnidadeTeste(Dominio* dominio) {
         return new UTCPF(dominio);
     else if (dynamic_cast<Data*>(dominio))
         return new UTData(dominio);
+    else if (dynamic_cast<Estado*>(dominio))
+        return new UTEstado(dominio);
     else
         return nullptr;
 };
@@ -83,16 +87,14 @@ void bateriaTestes(const vector<string>& tipoDominio) {
 /// Inicializando os testes e um exemplo de uso.
 
 int main() {
-    string TESTE = "59";
-    vector<string> dominiosTeste = {"Dinheiro", "Percentual", "CodigoDePagamento", "CodigoDeTitulo", "Cpf", "Data"};
+    Pagamento pagamento;
+    Estado estado;
+    vector<string> dominiosTeste = {"Dinheiro", "Percentual", "CodigoDePagamento", "CodigoDeTitulo", "Cpf", "Data", "Estado"};
     bateriaTestes(dominiosTeste);
 
-    Dominio* valorteste = criarDominio("Percentual");
-
-    valorteste->setValor(TESTE);
-    cout << valorteste->getValor();
-
-    delete valorteste;
+    estado.setValor("Previsto");
+    pagamento.setEstado(estado);
+    cout << pagamento.getEstado().getValor();
 
     return 0;
 }

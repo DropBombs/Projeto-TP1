@@ -24,3 +24,37 @@
 1716410072 source:c:\users\usuario\trabalho_1 (tp1)\trabalho1\dominios.cpp
 	"Dominios.h"
 
+1716517885 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\dominios.cpp
+	"Dominios.h"
+
+1716517417 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\dominios.h
+	<iostream>
+	<stdexcept>
+	<regex>
+	<map>
+	<iomanip>
+	<algorithm>
+	<cctype>
+
+1716520771 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\teste.cpp
+	"Teste.h"
+	"Dominios.h"
+
+1716524955 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\teste.h
+	<string>
+	<vector>
+	<functional>
+	<stdexcept>
+	"Dominios.h"
+
+1716522297 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\main.cpp
+	"Dominios.h"
+	"Teste.h"
+	"Entidades.h"
+
+1716524286 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\entidades.h
+	"Dominios.h"
+
+1716524690 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\entidades.cpp
+	"Entidades.h"
+

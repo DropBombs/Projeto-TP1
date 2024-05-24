@@ -165,3 +165,15 @@ void Data::validar(string valor) {
     if ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia > 30)
         throw invalid_argument("Dia inválido para o mês.");
 };
+
+//---------------------------------------------------------------------------------------------------
+
+void Estado::setValor(string valor) {
+    validar(valor);
+    this->estadoValue = valor;
+};
+
+void Estado::validar(string valor) {
+    if (valor != "Previsto" && valor != "Liquidado" && valor != "Inadimplente")
+        throw invalid_argument("Estado da conta inválido.");
+};

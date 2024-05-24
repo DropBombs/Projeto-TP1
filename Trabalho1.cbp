@@ -34,6 +34,10 @@
 		</Compiler>
 		<Unit filename="Dominios.cpp" />
 		<Unit filename="Dominios.h" />
+		<Unit filename="Entidades.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="Entidades.h" />
 		<Unit filename="Teste.cpp" />
 		<Unit filename="Teste.h" />
 		<Unit filename="main.cpp" />

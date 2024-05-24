@@ -5,6 +5,8 @@
 #include <regex>
 #include <map>
 #include <iomanip>
+#include <algorithm>
+#include <cctype>
 
 using namespace std;
 
@@ -96,6 +98,16 @@ class Data : public Dominio {
         void validar(string valor) override;
         void setValor(string valor) override;
         string getValor() override {return dataValue;};
+};
+
+class Estado : public Dominio {
+private:
+    string estadoValue;
+    string tratamentoString(string valor);
+public:
+    void validar(string valor) override;
+    void setValor(string valor) override;
+    string getValor() override {return estadoValue;};
 };
 
 #endif // DOMINIOS_H

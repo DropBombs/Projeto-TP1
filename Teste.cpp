@@ -147,3 +147,26 @@ void UTData::testeInvalido() {
             estado = FALHA;
     };
 };
+
+//---------------------------------------------------------------------------------------------------
+
+void UTEstado::testeValido() {
+    try {
+        instancia->setValor(VALOR_VALIDO);
+    } catch (const invalid_argument& excecao) {
+        estado = FALHA;
+    };
+
+    if (instancia->getValor() != VALOR_VALIDO)
+        estado = FALHA;
+};
+
+void UTEstado::testeInvalido() {
+    try {
+        instancia->setValor(VALOR_INVALIDO);
+        estado = FALHA;
+    } catch (const invalid_argument& excecao) {
+        if (instancia->getValor() == VALOR_INVALIDO)
+            estado = FALHA;
+    };
+};
