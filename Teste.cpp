@@ -170,3 +170,34 @@ void UTEstado::testeInvalido() {
             estado = FALHA;
     };
 };
+
+//---------------------------------------------------------------------------------------------------
+/// Implementações dos Testes de Entidade.
+
+bool TEPagamento::testeEntidade() {
+    CodigoDePagamento codigoTeste;
+    codigoTeste.setValor(VALOR_TESTE_CDP);
+    instancia->setCodigo(codigoTeste);
+    if (instancia->getCodigo().getValor() != VALOR_TESTE_CDP)
+        return false;
+
+    Data dataTeste;
+    dataTeste.setValor(VALOR_TESTE_DATA);
+    instancia->setData(dataTeste);
+    if (instancia->getData().getValor() != VALOR_TESTE_DATA)
+        return false;
+
+    Percentual percentualTeste;
+    percentualTeste.setValor(VALOR_TESTE_PER);
+    instancia->setPercentual(percentualTeste);
+    if (instancia->getPercentual().getValor() != VALOR_TESTE_PER)
+        return false;
+
+    Estado estadoTeste;
+    estadoTeste.setValor(VALOR_TESTE_EST);
+    instancia->setEstado(estadoTeste);
+    if (instancia->getEstado().getValor() != VALOR_TESTE_EST)
+        return false;
+
+    return true;
+};

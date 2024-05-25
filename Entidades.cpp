@@ -1,5 +1,9 @@
 #include "Entidades.h"
 
+void Pagamento::setId() {
+    Id = codigo.getValor();
+};
+
 void Pagamento::setCodigo(const CodigoDePagamento& codigo) {
     this->codigo = codigo;
 };

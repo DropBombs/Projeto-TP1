@@ -5,9 +5,12 @@
 #include <functional>
 #include <stdexcept>
 #include "Dominios.h"
+#include "Entidades.h"
+
 using namespace std;
 
 /// Declaração de classe abstrata para interface de criação de testes.
+
 
 class UnidadeTeste {
 public:
@@ -15,10 +18,12 @@ public:
     virtual void testeValido() = 0;
     virtual void testeInvalido() = 0;
     static constexpr short FALHA = 0;
-    static constexpr short SUCESSO = 1;
+    static constexpr short SUCESSO = 1; /// Declarações de constantes para identificação do estado.
     int estado;
     int executar();  /// Função que chama a implementação específica de cada teste.
 };
+
+/// Declarações dos Testes de Unidade dos Dominios.
 
 class UTPercentual : public UnidadeTeste {
 private:
@@ -107,5 +112,19 @@ public:
 };
 
 //---------------------------------------------------------------------------------------------------
+/// Declarações dos Testes de Unidade das Entidades.
+
+class TEPagamento {
+private:
+    Pagamento* instancia;
+    string const VALOR_TESTE_CDP = "12312312";
+    string const VALOR_TESTE_DATA = "31-12-2000";
+    string const VALOR_TESTE_PER = "50";
+    string const VALOR_TESTE_EST = "Previsto";
+public:
+    TEPagamento(Pagamento* instancia) : instancia(instancia) {};
+    ~TEPagamento() {delete instancia;};
+    bool testeEntidade();
+};
 
 #endif // TESTE_H

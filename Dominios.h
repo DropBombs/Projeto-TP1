@@ -49,38 +49,38 @@ public:
 };
 
 class CodigoDePagamento : public Dominio {
-    private:
+private:
         string codigoDePagamentoValue;
         static constexpr unsigned short TAMANHO = 8;
-    public:
+public:
         void validar(string valor) override;
         void setValor(string valor) override;
         string getValor() override {return codigoDePagamentoValue;};
 };
 
 class CodigoDeTitulo : public Dominio {
-    private:
+private:
         string codigoDeTituloValue;
         static constexpr unsigned short TAMANHO = 11;
         static const char* siglasCodigosDeTitulo[];
-    public:
+public:
         void validar(string valor) override;
         void setValor(string valor) override;
         string getValor() override {return codigoDeTituloValue;};
 };
 
 class Cpf : public Dominio {
-    private:
+private:
         string cpfValue;
         static constexpr unsigned short TAMANHO = 14;
-    public:
+public:
         void validar(string valor) override;
         void setValor(string valor) override;
         string getValor() override {return cpfValue;};
 };
 
 class Data : public Dominio {
-    private:
+private:
         string dataValue;
         static const map<string, int>& getLimites() {
             static const map<string, int> limites = {
@@ -94,7 +94,7 @@ class Data : public Dominio {
             };
             return limites;
         }
-    public:
+public:
         void validar(string valor) override;
         void setValor(string valor) override;
         string getValor() override {return dataValue;};

@@ -88,13 +88,16 @@ void bateriaTestes(const vector<string>& tipoDominio) {
 
 int main() {
     Pagamento pagamento;
-    Estado estado;
     vector<string> dominiosTeste = {"Dinheiro", "Percentual", "CodigoDePagamento", "CodigoDeTitulo", "Cpf", "Data", "Estado"};
     bateriaTestes(dominiosTeste);
 
-    estado.setValor("Previsto");
-    pagamento.setEstado(estado);
-    cout << pagamento.getEstado().getValor();
+    TEPagamento testeP(&pagamento);
+    if (testeP.testeEntidade())
+        cout << "Sucesso nos testes de Pagamento.";
+    else {
+        cout << "Falha nos testes de Pagamento.";
+        exit(-1);
+    }
 
     return 0;
 }
