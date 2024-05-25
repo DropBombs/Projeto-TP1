@@ -178,26 +178,34 @@ bool TEPagamento::testeEntidade() {
     CodigoDePagamento codigoTeste;
     codigoTeste.setValor(VALOR_TESTE_CDP);
     instancia->setCodigo(codigoTeste);
-    if (instancia->getCodigo().getValor() != VALOR_TESTE_CDP)
+    if (instancia->getCodigo().getValor() != VALOR_TESTE_CDP) {
+        cout << "Erro ao inicializar Código de Pagamento";
         return false;
+    };
 
     Data dataTeste;
     dataTeste.setValor(VALOR_TESTE_DATA);
     instancia->setData(dataTeste);
-    if (instancia->getData().getValor() != VALOR_TESTE_DATA)
+    if (instancia->getData().getValor() != VALOR_TESTE_DATA) {
+        cout << "Erro ao inicializar Data.";
         return false;
+    };
 
     Percentual percentualTeste;
     percentualTeste.setValor(VALOR_TESTE_PER);
     instancia->setPercentual(percentualTeste);
-    if (instancia->getPercentual().getValor() != VALOR_TESTE_PER)
+    if (instancia->getPercentual().getValor() != VALOR_TESTE_PER) {
+        cout << "Erro ao inicializar Percentual.";
         return false;
+    };
 
     Estado estadoTeste;
     estadoTeste.setValor(VALOR_TESTE_EST);
     instancia->setEstado(estadoTeste);
-    if (instancia->getEstado().getValor() != VALOR_TESTE_EST)
+    if (instancia->getEstado().getValor() != VALOR_TESTE_EST) {
+        cout << "Erro ao inicializar Código de Pagamento";
         return false;
+    };
 
     return true;
 };

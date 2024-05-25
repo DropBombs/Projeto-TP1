@@ -9,7 +9,7 @@
 
 using namespace std;
 
-/// Declaração de classe abstrata para interface de criação de testes.
+/// Declaração de classe abstrata para interface de criação de testes de Dominio.
 
 
 class UnidadeTeste {
@@ -112,9 +112,17 @@ public:
 };
 
 //---------------------------------------------------------------------------------------------------
+/// Declaração de classe abstrata para interface de criação de testes de Entidade.
+
+class TesteEntidade {
+public:
+    virtual ~TesteEntidade() = default;
+    virtual bool testeEntidade() = 0;
+};
+
 /// Declarações dos Testes de Unidade das Entidades.
 
-class TEPagamento {
+class TEPagamento : public TesteEntidade {
 private:
     Pagamento* instancia;
     string const VALOR_TESTE_CDP = "12312312";
@@ -124,7 +132,7 @@ private:
 public:
     TEPagamento(Pagamento* instancia) : instancia(instancia) {};
     ~TEPagamento() {delete instancia;};
-    bool testeEntidade();
+    bool testeEntidade() override;
 };
 
 #endif // TESTE_H

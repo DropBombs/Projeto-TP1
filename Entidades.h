@@ -13,6 +13,8 @@ public:
     virtual string getId() = 0;
 };
 
+/// Declarações das Entidades, utilizando herança.
+
 class Pagamento : public Entidade {
 private:
     CodigoDePagamento codigo;

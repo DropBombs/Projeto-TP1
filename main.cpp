@@ -88,16 +88,25 @@ void bateriaTestes(const vector<string>& tipoDominio) {
 
 int main() {
     Pagamento pagamento;
-    vector<string> dominiosTeste = {"Dinheiro", "Percentual", "CodigoDePagamento", "CodigoDeTitulo", "Cpf", "Data", "Estado"};
-    bateriaTestes(dominiosTeste);
-
     TEPagamento testeP(&pagamento);
-    if (testeP.testeEntidade())
-        cout << "Sucesso nos testes de Pagamento.";
-    else {
-        cout << "Falha nos testes de Pagamento.";
-        exit(-1);
-    }
+    Data data;
+    bool resultadoTeste;
+    /// Executando os testes nos Dominios.
+
+    vector<string> dominiosTeste = {"Dinheiro", "Percentual", "CodigoDePagamento",
+                                    "CodigoDeTitulo", "Cpf", "Data", "Estado"};
+
+    bateriaTestes(dominiosTeste);
+    /// Executando os testes nas Entidades.
+
+    resultadoTeste = testeP.testeEntidade();
+    if (resultadoTeste)
+        cout << "Sucesso nos testes de Pagamento." << endl;
+    /// Exemplo.
+
+    data.setValor("01-05-2025");
+    pagamento.setData(data);
+    cout << pagamento.getData().getValor();
 
     return 0;
 }
