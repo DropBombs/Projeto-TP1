@@ -103,7 +103,6 @@ public:
 class Estado : public Dominio {
 private:
     string estadoValue;
-    string tratamentoString(string valor);
 public:
     void validar(string valor) override;
     void setValor(string valor) override;
