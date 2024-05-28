@@ -172,6 +172,75 @@ void UTEstado::testeInvalido() {
 };
 
 //---------------------------------------------------------------------------------------------------
+
+void UTNome::testeValido(){
+    try {
+        instancia->setValor(VALOR_VALIDO);
+    } catch (const invalid_argument& excecao) {
+        estado = FALHA;
+    };
+
+    if (instancia->getValor() != VALOR_VALIDO)
+        estado = FALHA;
+};
+
+void UTNome::testeInvalido() {
+    try {
+        instancia->setValor(VALOR_INVALIDO);
+        estado = FALHA;
+    } catch (const invalid_argument& excecao) {
+        if (instancia->getValor() == VALOR_INVALIDO)
+            estado = FALHA;
+    };
+};
+
+//---------------------------------------------------------------------------------------------------
+
+void UTSenha::testeValido(){
+    try {
+        instancia->setValor(VALOR_VALIDO);
+    } catch (const invalid_argument& excecao) {
+        estado = FALHA;
+    };
+
+    if (instancia->getValor() != VALOR_VALIDO)
+        estado = FALHA;
+};
+
+void UTSenha::testeInvalido() {
+    try {
+        instancia->setValor(VALOR_INVALIDO);
+        estado = FALHA;
+    } catch (const invalid_argument& excecao) {
+        if (instancia->getValor() == VALOR_INVALIDO)
+            estado = FALHA;
+    };
+};
+
+//---------------------------------------------------------------------------------------------------
+
+void UTSetor::testeValido(){
+    try {
+        instancia->setValor(VALOR_VALIDO);
+    } catch (const invalid_argument& excecao) {
+        estado = FALHA;
+    };
+
+    if (instancia->getValor() != VALOR_VALIDO)
+        estado = FALHA;
+};
+
+void UTSetor::testeInvalido() {
+    try {
+        instancia->setValor(VALOR_INVALIDO);
+        estado = FALHA;
+    } catch (const invalid_argument& excecao) {
+        if (instancia->getValor() == VALOR_INVALIDO)
+            estado = FALHA;
+    };
+};
+
+//---------------------------------------------------------------------------------------------------
 /// Implementações dos Testes de Entidade.
 
 bool TEPagamento::testeEntidade() {

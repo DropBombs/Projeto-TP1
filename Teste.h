@@ -1,9 +1,7 @@
 #ifndef TESTE_H
 #define TESTE_H
 #include <string>
-#include <vector>
 #include <functional>
-#include <stdexcept>
 #include "Dominios.h"
 #include "Entidades.h"
 
@@ -107,6 +105,42 @@ private:
     ~UTEstado() {delete instancia;};
 public:
     UTEstado(Dominio* instancia) : instancia(instancia) {estado = SUCESSO;};
+    void testeValido() override;
+    void testeInvalido() override;
+};
+
+class UTNome : public UnidadeTeste {
+private:
+    Dominio* instancia;
+    string const VALOR_VALIDO = "Tiago Nunes";
+    string const VALOR_INVALIDO = "tiago nunes";
+    ~UTNome() {delete instancia;};
+public:
+    UTNome(Dominio* instancia) : instancia(instancia) {estado = SUCESSO;};
+    void testeValido() override;
+    void testeInvalido() override;
+};
+
+class UTSenha : public UnidadeTeste {
+private:
+    Dominio* instancia;
+    string const VALOR_VALIDO = "184302";
+    string const VALOR_INVALIDO = "123456";
+    ~UTSenha() {delete instancia;};
+public:
+    UTSenha(Dominio* instancia) : instancia(instancia) {estado = SUCESSO;};
+    void testeValido() override;
+    void testeInvalido() override;
+};
+
+class UTSetor : public UnidadeTeste {
+private:
+    Dominio* instancia;
+    string const VALOR_VALIDO = "Agricultura";
+    string const VALOR_INVALIDO = "mineracao";
+    ~UTSetor() {delete instancia;};
+public:
+    UTSetor(Dominio* instancia) : instancia(instancia) {estado = SUCESSO;};
     void testeValido() override;
     void testeInvalido() override;
 };

@@ -7,6 +7,8 @@
 #include <iomanip>
 #include <algorithm>
 #include <cctype>
+#include <sstream>
+#include <vector>
 
 using namespace std;
 
@@ -109,4 +111,32 @@ public:
     string getValor() override {return estadoValue;};
 };
 
+class Nome : public Dominio {
+private:
+    string nomeValue;
+public:
+    void validar(string valor) override;
+    void setValor(string valor) override;
+    string getValor() override {return nomeValue;};
+};
+
+class Senha : public Dominio {
+private:
+    string senhaValue;
+    static constexpr unsigned short TAMANHO = 6;
+public:
+    void validar(string valor) override;
+    void setValor(string valor) override;
+    string getValor() override {return senhaValue;};
+};
+
+class Setor : public Dominio {
+private:
+    string setorValue;
+    static const char* setores[];
+public:
+    void validar(string valor) override;
+    void setValor(string valor) override;
+    string getValor() override {return setorValue;};
+};
 #endif // DOMINIOS_H

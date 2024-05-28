@@ -16,7 +16,10 @@ Dominio* criarDominio(const string& tipo) {
         {"CodigoDeTitulo", []() {return new CodigoDeTitulo();}},
         {"Cpf", []() {return new Cpf();}},
         {"Data", []() {return new Data();}},
-        {"Estado", []() {return new Estado();}}
+        {"Estado", []() {return new Estado();}},
+        {"Nome", []() {return new Nome();}},
+        {"Senha", []() {return new Senha();}},
+        {"Setor", []() {return new Setor();}}
         /// Adicionar outros dominios.
     };
 
@@ -46,6 +49,12 @@ UnidadeTeste* criarUnidadeTeste(Dominio* dominio) {
         return new UTData(dominio);
     else if (dynamic_cast<Estado*>(dominio))
         return new UTEstado(dominio);
+    else if (dynamic_cast<Nome*>(dominio))
+        return new UTNome(dominio);
+    else if (dynamic_cast<Senha*>(dominio))
+        return new UTSenha(dominio);
+    else if (dynamic_cast<Setor*>(dominio))
+        return new UTSetor(dominio);
     else
         return nullptr;
 };
@@ -94,7 +103,7 @@ int main() {
     /// Executando os testes nos Dominios.
 
     vector<string> dominiosTeste = {"Dinheiro", "Percentual", "CodigoDePagamento",
-                                    "CodigoDeTitulo", "Cpf", "Data", "Estado"};
+                                    "CodigoDeTitulo", "Cpf", "Data", "Estado", "Nome", "Senha", "Setor"};
 
     bateriaTestes(dominiosTeste);
     /// Executando os testes nas Entidades.
@@ -106,7 +115,7 @@ int main() {
 
     data.setValor("01-05-2025");
     pagamento.setData(data);
-    cout << pagamento.getData().getValor();
+    cout << pagamento.getData().getValor() << endl;
 
     return 0;
 }
