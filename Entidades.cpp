@@ -6,7 +6,7 @@ void Pagamento::setId() {
     Id = codigo.getValor();
 };
 
-void Pagamento::setCodigo(const CodigoDePagamento& codigo) {
+void Pagamento::setCodigoPagamento(const CodigoDePagamento& codigo) {
     this->codigo = codigo;
 };
 
@@ -20,4 +20,34 @@ void Pagamento::setPercentual(const Percentual& percentual) {
 
 void Pagamento::setEstado(const Estado& estado) {
     this->estado = estado;
+};
+
+//---------------------------------------------------------------------------------------------------
+
+void Titulo::setId() {
+    Id = codigo.getValor();
+};
+
+void Titulo::setCodigoTitulo(const CodigoDeTitulo& codigo) {
+    this->codigo = codigo;
+};
+
+void Titulo::setNome(const Nome& nome) {
+    this->emissor = nome;
+};
+
+void Titulo::setSetor(const Setor& setor) {
+    this->setor = setor;
+};
+
+void Titulo::setDataEmissao(const Data& data) {
+    this->emissao = data;
+};
+
+void Titulo::setDataVencimento(const Data& data) {
+    this->vencimento = data;
+};
+
+void Titulo::setDinheiro(const Dinheiro& valor) {
+    this->valor = valor;
 };

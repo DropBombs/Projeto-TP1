@@ -48,7 +48,8 @@ void CodigoDePagamento::validar(string valor) {
 
 //---------------------------------------------------------------------------------------------------
 
-const char* CodigoDeTitulo::siglasCodigosDeTitulo[] = {"CDB", "CRA", "CRI", "LCA", "LCI", "DEB"};
+const char* CodigoDeTitulo::siglasCodigosDeTitulo[] = {"CDB", "CRA", "CRI",
+                                                        "LCA", "LCI", "DEB"};
 
 void CodigoDeTitulo::setValor(string valor) {
     validar(valor);
@@ -180,11 +181,6 @@ void Estado::validar(string valor) {
 
 //---------------------------------------------------------------------------------------------------
 
-void Nome::setValor(string valor) {
-    validar(valor);
-    this->nomeValue = valor;
-};
-
 bool validarTermo(const string& termo) {
     if (termo.size() < 3 || termo.size() > 10) {
         return false;
@@ -200,22 +196,27 @@ bool validarTermo(const string& termo) {
     return true;
 };
 
+void Nome::setValor(string valor) {
+    validar(valor);
+    this->nomeValue = valor;
+};
+
 void Nome::validar(string valor) {
     stringstream ss(valor);
     string termo;
     vector<string> termos;
 
-    //Dividindo o nome completo em termos separados por espaços
+    /// Dividindo o nome completo em termos separados por espaços.
     while (getline(ss, termo, ' ')) {
         termos.push_back(termo);
     };
 
-    // Verificando se há um ou dois termos
+    /// Verificando se há um ou dois termos.
     if (termos.size() < 1 || termos.size() > 2) {
         throw invalid_argument("O nome deve ter um ou dois termos.");
     };
 
-    // Validando cada termo
+    /// Validando cada termo.
     for (const string& t : termos) {
         if (!validarTermo(t)) {
             throw invalid_argument("Cada termo deve ter 3 a 10 caracteres, ser composto apenas por letras e começar com uma letra maiúscula.");
@@ -270,7 +271,11 @@ void Senha::validar(string valor) {
 
 //---------------------------------------------------------------------------------------------------
 
-const char* Setor::setores[] = {"Agricultura", "Construção civil", "Energia", "Finanças", "Imobiliário", "Papel e celulose", "Pecuária", "Química e petroquímica", "Metalurgia e siderurgia", "Mineração"};
+const char* Setor::setores[] = {"Agricultura", "Construção civil",
+                                "Energia", "Finanças", "Imobiliário",
+                                "Papel e celulose", "Pecuária",
+                                "Química e petroquímica", "Metalurgia e siderurgia",
+                                "Mineração"};
 
 void Setor::setValor(string valor) {
     validar(valor);

@@ -169,4 +169,19 @@ public:
     bool testeEntidade() override;
 };
 
+class TETitulo : public TesteEntidade {
+private:
+    Titulo* instancia;
+    string const VALOR_TESTE_CDT = "LCA123BC67Z";
+    string const VALOR_TESTE_NOME = "Antonio Paulo";
+    string const VALOR_TESTE_SETOR = "Química e petroquímica";
+    string const VALOR_TESTE_EMISSAO = "29-05-2024";
+    string const VALOR_TESTE_VENC = "01-06-2024";
+    string const VALOR_TESTE_DINHEIRO = "500.70";
+public:
+    TETitulo(Titulo* instancia) : instancia(instancia) {};
+    ~TETitulo() {delete instancia;};
+    bool testeEntidade() override;
+};
+
 #endif // TESTE_H

@@ -25,14 +25,40 @@ private:
 public:
     void setId() override;
     string getId() override {return Id;};
-    void setCodigo(const CodigoDePagamento&);
-    CodigoDePagamento getCodigo() const {return codigo;};
+    void setCodigoPagamento(const CodigoDePagamento&);
+    CodigoDePagamento getCodigoPagamento() const {return codigo;};
     void setData(const Data&);
     Data getData() const {return data;};
     void setPercentual(const Percentual&);
     Percentual getPercentual() const {return percentual;};
     void setEstado(const Estado&);
     Estado getEstado() const {return estado;};
+};
+
+class Titulo : public Entidade {
+private:
+    CodigoDeTitulo codigo;
+    Nome emissor;
+    Setor setor;
+    Data emissao;
+    Data vencimento;
+    Dinheiro valor;
+    string Id;
+public:
+    void setId() override;
+    string getId() override {return Id;};
+    void setCodigoTitulo(const CodigoDeTitulo&);
+    CodigoDeTitulo getCodigoTitulo() const {return codigo;};
+    void setNome(const Nome&);
+    Nome getNome() const {return emissor;};
+    void setSetor(const Setor&);
+    Setor getSetor() const {return setor;};
+    void setDataEmissao(const Data&);
+    Data getDataEmissao() const {return emissao;};
+    void setDataVencimento(const Data&);
+    Data getDataVencimento() const {return vencimento;};
+    void setDinheiro(const Dinheiro&);
+    Dinheiro getDinheiro() const {return valor;};
 };
 
 #endif // ENTIDADES_H

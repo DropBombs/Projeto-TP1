@@ -246,8 +246,8 @@ void UTSetor::testeInvalido() {
 bool TEPagamento::testeEntidade() {
     CodigoDePagamento codigoTeste;
     codigoTeste.setValor(VALOR_TESTE_CDP);
-    instancia->setCodigo(codigoTeste);
-    if (instancia->getCodigo().getValor() != VALOR_TESTE_CDP) {
+    instancia->setCodigoPagamento(codigoTeste);
+    if (instancia->getCodigoPagamento().getValor() != VALOR_TESTE_CDP) {
         cout << "Erro ao inicializar Código de Pagamento";
         return false;
     };
@@ -278,3 +278,59 @@ bool TEPagamento::testeEntidade() {
 
     return true;
 };
+
+//---------------------------------------------------------------------------------------------------
+
+bool TETitulo::testeEntidade() {
+    CodigoDeTitulo codigoTeste;
+    codigoTeste.setValor(VALOR_TESTE_CDT);
+    instancia->setCodigoTitulo(codigoTeste);
+    if (instancia->getCodigoTitulo().getValor() != VALOR_TESTE_CDT) {
+        cout << "Erro ao inicializar Código de Titulo.";
+        return false;
+    };
+
+    Nome nomeTeste;
+    nomeTeste.setValor(VALOR_TESTE_NOME);
+    instancia->setNome(nomeTeste);
+    if (instancia->getNome().getValor() != VALOR_TESTE_NOME) {
+        cout << "Erro ao inicializar Nome.";
+        return false;
+    };
+
+    Setor setorTeste;
+    setorTeste.setValor(VALOR_TESTE_SETOR);
+    instancia->setSetor(setorTeste);
+    if (instancia->getSetor().getValor() != VALOR_TESTE_SETOR) {
+        cout << "Erro ao inicializar Setor.";
+        return false;
+    };
+
+    Data emissaoTeste;
+    emissaoTeste.setValor(VALOR_TESTE_EMISSAO);
+    instancia->setDataEmissao(emissaoTeste);
+    if (instancia->getDataEmissao().getValor() != VALOR_TESTE_EMISSAO) {
+        cout << "Erro ao inicializar Data de Emissao.";
+        return false;
+    };
+
+    Data vencimentoTeste;
+    vencimentoTeste.setValor(VALOR_TESTE_VENC);
+    instancia->setDataVencimento(vencimentoTeste);
+    if (instancia->getDataVencimento().getValor() != VALOR_TESTE_VENC) {
+        cout << "Erro ao inicializar Data de Vencimento.";
+        return false;
+    };
+
+    Dinheiro valorTeste;
+    valorTeste.setValor(VALOR_TESTE_DINHEIRO);
+    instancia->setDinheiro(valorTeste);
+    if (instancia->getDinheiro().getValor() != VALOR_TESTE_DINHEIRO) {
+        cout << "Erro ao inicializar Dinheiro.";
+        return false;
+    };
+
+    return true;
+};
+
+//---------------------------------------------------------------------------------------------------

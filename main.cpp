@@ -83,39 +83,45 @@ void bateriaTestes(const vector<string>& tipoDominio) {
         UnidadeTeste* testeUnidade = criarUnidadeTeste(dominio);
         bool retorno = autoTeste(dominio, testeUnidade);
         if (retorno) {
-            cout << "Sucesso na inicialização de " << tipo << "." << endl;
+            cout << "Sucesso nos testes de " << tipo << "." << endl;
         } else {
             cout << "Falha nos testes iniciais de " << tipo << ". Encerrando..." << endl;
             exit(-1);
         }
         delete dominio;
     }
-    cout << "Começando operações..." << endl;
 };
 
-/// Inicializando os testes e um exemplo de uso.
+/// Inicializando as Entidades e testes com um exemplo de uso.
 
 int main() {
     Pagamento pagamento;
-    TEPagamento testeP(&pagamento);
-    Data data;
+    TEPagamento testePagamento(&pagamento);
+    Titulo titulo;
+    TETitulo testeTitulo(&titulo);
+    Setor setor;
     bool resultadoTeste;
     /// Executando os testes nos Dominios.
 
     vector<string> dominiosTeste = {"Dinheiro", "Percentual", "CodigoDePagamento",
-                                    "CodigoDeTitulo", "Cpf", "Data", "Estado", "Nome", "Senha", "Setor"};
+                                    "CodigoDeTitulo", "Cpf", "Data", "Estado",
+                                    "Nome", "Senha", "Setor"};
 
     bateriaTestes(dominiosTeste);
     /// Executando os testes nas Entidades.
 
-    resultadoTeste = testeP.testeEntidade();
+    resultadoTeste = testePagamento.testeEntidade();
     if (resultadoTeste)
         cout << "Sucesso nos testes de Pagamento." << endl;
+
+    resultadoTeste = testeTitulo.testeEntidade();
+    if (resultadoTeste)
+        cout << "Sucesso nos testes de Titulo." << endl;
     /// Exemplo.
 
-    data.setValor("01-05-2025");
-    pagamento.setData(data);
-    cout << pagamento.getData().getValor() << endl;
+    setor.setValor("Papel e celulose");
+    titulo.setSetor(setor);
+    cout << titulo.getSetor().getValor();
 
     return 0;
 }
