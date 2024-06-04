@@ -76,5 +76,6 @@ public:
     Nome getNome() const {return nome;};
     void setSenha(const Senha&);
     Senha getSenha() const {return senha;};
+};
 
 #endif // ENTIDADES_H
