@@ -2,9 +2,9 @@
 #define ENTIDADES_H
 #include "Dominios.h"
 
-/// Declaração de interface para padronização de Entidades.
+/// DeclaraÃ§Ã£o de interface para padronizaÃ§Ã£o de Entidades.
 /// "Id" = identidade, definido como objeto identificador da classe.
-/// Por exemplo, o da entidade Pagamento seria Código de Pagamento.
+/// Por exemplo, o da entidade Pagamento seria CÃ³digo de Pagamento.
 
 class Entidade {
 public:
@@ -13,7 +13,7 @@ public:
     virtual string getId() = 0;
 };
 
-/// Declarações das Entidades, utilizando herança.
+/// DeclaraÃ§Ãµes das Entidades, utilizando heranÃ§a.
 
 class Pagamento : public Entidade {
 private:
@@ -60,5 +60,21 @@ public:
     void setDinheiro(const Dinheiro&);
     Dinheiro getDinheiro() const {return valor;};
 };
+
+class Conta : public Entidade {
+private:
+    Cpf cpf;
+    Nome nome;
+    Senha senha;
+    string Id;
+public:
+    void setId() override;
+    string getId() override {return Id;};
+    void setCpf(const Cpf&);
+    Cpf getCpf() const {return cpf;};
+    void setNome(const Nome&);
+    Nome getNome() const {return nome;};
+    void setSenha(const Senha&);
+    Senha getSenha() const {return senha;};
 
 #endif // ENTIDADES_H
