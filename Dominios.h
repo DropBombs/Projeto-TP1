@@ -12,20 +12,26 @@
 
 using namespace std;
 
-/// Declaração de classe abstrata para interface de criação de dominios.
-/// Utilização de tipo string para padronização da interface.
+/// @file Dominios.h Arquivo contendo os Dominios requeridos.
 
-class Dominio {
+/// @brief Declaracao de classe abstrata para interface e padronizacao da criacao de Dominios.
+/// Uso de tipo string para uniformidade dos parametros.
+
+class Dominio { // 190084499
 public:
-    virtual ~Dominio() = default;
-    virtual void validar(string valor) = 0;
-    virtual void setValor(string valor) = 0;
+    virtual ~Dominio() = default; /// Metodo para validacao que pode lancar excecao a ser implementado pela classe herdada.
+    /// @param valor Valor a ser validado antes de guardado.
+    virtual void validar(string valor) = 0; /// Metodo para atribuicao de valor valido a ser implementado pela classe herdada.
+    /// @param valor Valor a ser guardado.
+    virtual void setValor(string valor) = 0; /// Metodo para obtencao do valor guardado a ser implementado pela classe herdada.
+    /// @return Retorno do valor guardado.
     virtual string getValor() = 0;
 };
 
-/// Declarações dos dominios, utilizando herança.
+// Declaracoes dos Dominios, utilizando herança.
+/// Dominio requerido pelas especificacoes.
 
-class Dinheiro : public Dominio {
+class Dinheiro : public Dominio { // 190084499
 private:
     float dinheiroValue;
     static constexpr float LIMITE_INF = 0.00;
@@ -39,7 +45,9 @@ public:
         return aux.str();};
 };
 
-class Percentual : public Dominio {
+/// Dominio requerido pelas especificacoes.
+
+class Percentual : public Dominio { // 190084499
 private:
     int percentualValue;
     static constexpr unsigned short LIMITE_INF = 0;
@@ -50,6 +58,8 @@ public:
     string getValor() override {return to_string(percentualValue);};
 };
 
+/// Dominio requerido pelas especificacoes.
+
 class CodigoDePagamento : public Dominio {
 private:
         string codigoDePagamentoValue;
@@ -59,6 +69,8 @@ public:
         void setValor(string valor) override;
         string getValor() override {return codigoDePagamentoValue;};
 };
+
+/// Dominio requerido pelas especificacoes.
 
 class CodigoDeTitulo : public Dominio {
 private:
@@ -71,6 +83,8 @@ public:
         string getValor() override {return codigoDeTituloValue;};
 };
 
+/// Dominio requerido pelas especificacoes.
+
 class Cpf : public Dominio {
 private:
         string cpfValue;
@@ -80,6 +94,8 @@ public:
         void setValor(string valor) override;
         string getValor() override {return cpfValue;};
 };
+
+/// Dominio requerido pelas especificacoes.
 
 class Data : public Dominio {
 private:
@@ -102,7 +118,9 @@ public:
         string getValor() override {return dataValue;};
 };
 
-class Estado : public Dominio {
+/// Dominio requerido pelas especificacoes.
+
+class Estado : public Dominio { // 190084499
 private:
     string estadoValue;
 public:
@@ -110,6 +128,8 @@ public:
     void setValor(string valor) override;
     string getValor() override {return estadoValue;};
 };
+
+/// Dominio requerido pelas especificacoes.
 
 class Nome : public Dominio {
 private:
@@ -119,6 +139,8 @@ public:
     void setValor(string valor) override;
     string getValor() override {return nomeValue;};
 };
+
+/// Dominio requerido pelas especificacoes.
 
 class Senha : public Dominio {
 private:
@@ -130,6 +152,8 @@ public:
     string getValor() override {return senhaValue;};
 };
 
+/// Dominio requerido pelas especificacoes.
+
 class Setor : public Dominio {
 private:
     string setorValue;
@@ -139,4 +163,5 @@ public:
     void setValor(string valor) override;
     string getValor() override {return setorValue;};
 };
+
 #endif // DOMINIOS_H

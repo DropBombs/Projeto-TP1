@@ -2,20 +2,23 @@
 #define ENTIDADES_H
 #include "Dominios.h"
 
-/// Declaração de interface para padronização de Entidades.
-/// "Id" = identidade, definido como objeto identificador da classe.
-/// Por exemplo, o da entidade Pagamento seria Código de Pagamento.
+/// @file Entidades.h Arquivo contendo as Entidades requeridas.
 
-class Entidade {
+/// Declaracao de classe abstrata para interface e padronizacao da criacao de Entidades.
+// "Id" = identidade, definido como objeto identificador da classe.
+// Por exemplo, o da Entidade Pagamento seria CodigoDePagamento.
+
+class Entidade { // 190084499
 public:
-    virtual ~Entidade() = default;
-    virtual void setId() = 0;
+    virtual ~Entidade() = default; /// Metodo para atribuicao de identificador da Entidade.
+    virtual void setId() = 0; /// Metodo para obtencao do identificador da Entidade.
     virtual string getId() = 0;
 };
 
-/// Declarações das Entidades, utilizando herança.
+// Declaracoes das Entidades, utilizando heranca.
+/// Entidade requerida, instanciando os Dominios definidos.
 
-class Pagamento : public Entidade {
+class Pagamento : public Entidade { // 190084499
 private:
     CodigoDePagamento codigo;
     Data data;
@@ -35,7 +38,9 @@ public:
     Estado getEstado() const {return estado;};
 };
 
-class Titulo : public Entidade {
+/// Entidade requerida, instanciando os Dominios definidos.
+
+class Titulo : public Entidade { // 190084499
 private:
     CodigoDeTitulo codigo;
     Nome emissor;

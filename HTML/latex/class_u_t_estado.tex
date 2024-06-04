@@ -1,0 +1,92 @@
+\doxysection{UTEstado Class Reference}
+\hypertarget{class_u_t_estado}{}\label{class_u_t_estado}\index{UTEstado@{UTEstado}}
+
+
+Classe para Testes do \doxylink{class_dominio}{Dominio} \doxylink{class_estado}{Estado}.  
+
+
+
+
+{\ttfamily \#include $<$Teste.\+h$>$}
+
+Inheritance diagram for UTEstado\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_t_estado}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_t_estado_a0be46b2295027541e67102c7991627af}\label{class_u_t_estado_a0be46b2295027541e67102c7991627af} 
+{\bfseries UTEstado} (\mbox{\hyperlink{class_dominio}{Dominio}} \texorpdfstring{$\ast$}{*}instancia)
+\item 
+void \mbox{\hyperlink{class_u_t_estado_aa992ace577b63e03d5e693cacb9f7bda}{teste\+Valido}} () override
+\begin{DoxyCompactList}\small\item\em Teste de valor valido a ser implementado pela classe herdada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_t_estado_af3883dc0879a18e8c29a911ee93ff131}{teste\+Invalido}} () override
+\begin{DoxyCompactList}\small\item\em Teste de valor invalido a ser implementado pela classe herdada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unidade_teste}{Unidade\+Teste}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_unidade_teste_a68eb44d72202d7b819aab4a6ab7c3f38}{executar}} ()
+\begin{DoxyCompactList}\small\item\em Metodo para execucao dos Testes de valor valido e invalido e retorno do estado em forma de inteiro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_unidade_teste}{Unidade\+Teste}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries estado}
+\begin{DoxyCompactList}\small\item\em Declaracao de inteiro para atribuicao do resultado Teste. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_unidade_teste}{Unidade\+Teste}}}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr short {\bfseries FALHA} = 0
+\begin{DoxyCompactList}\small\item\em Definicao de constante para identificacao do estado. \end{DoxyCompactList}\item 
+static constexpr short {\bfseries SUCESSO} = 1
+\begin{DoxyCompactList}\small\item\em Definicao de constante para identificacao do estado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe para Testes do \doxylink{class_dominio}{Dominio} \doxylink{class_estado}{Estado}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instancia} & Ponteiro de tipo \doxylink{class_estado}{Estado} para Teste. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_t_estado_af3883dc0879a18e8c29a911ee93ff131}\index{UTEstado@{UTEstado}!testeInvalido@{testeInvalido}}
+\index{testeInvalido@{testeInvalido}!UTEstado@{UTEstado}}
+\doxysubsubsection{\texorpdfstring{testeInvalido()}{testeInvalido()}}
+{\footnotesize\ttfamily \label{class_u_t_estado_af3883dc0879a18e8c29a911ee93ff131} 
+void UTEstado\+::teste\+Invalido (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Teste de valor invalido a ser implementado pela classe herdada. 
+
+
+
+Implements \mbox{\hyperlink{class_unidade_teste_a60c3668557607ee1545c0b1fbfcffa2c}{Unidade\+Teste}}.
+
+\Hypertarget{class_u_t_estado_aa992ace577b63e03d5e693cacb9f7bda}\index{UTEstado@{UTEstado}!testeValido@{testeValido}}
+\index{testeValido@{testeValido}!UTEstado@{UTEstado}}
+\doxysubsubsection{\texorpdfstring{testeValido()}{testeValido()}}
+{\footnotesize\ttfamily \label{class_u_t_estado_aa992ace577b63e03d5e693cacb9f7bda} 
+void UTEstado\+::teste\+Valido (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Teste de valor valido a ser implementado pela classe herdada. 
+
+
+
+Implements \mbox{\hyperlink{class_unidade_teste_ae062bdfca0140336c212fcfea2f13817}{Unidade\+Teste}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Usuario/\+Desktop/\+Duarte/\+Downloads/\+Antonio Paulo/\+Estudos/\+TP1/\+Projeto\+TP1/\+Projeto-\/\+TP1/\+Projeto-\/\+TP1/\mbox{\hyperlink{_teste_8h}{Teste.\+h}}\item 
+C\+:/\+Users/\+Usuario/\+Desktop/\+Duarte/\+Downloads/\+Antonio Paulo/\+Estudos/\+TP1/\+Projeto\+TP1/\+Projeto-\/\+TP1/\+Projeto-\/\+TP1/Teste.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,80 @@
+\doxysection{Dominio Class Reference}
+\hypertarget{class_dominio}{}\label{class_dominio}\index{Dominio@{Dominio}}
+
+
+Declaracao de classe abstrata para interface e padronizacao da criacao de Dominios. Uso de tipo string para uniformidade dos parametros.  
+
+
+
+
+{\ttfamily \#include $<$Dominios.\+h$>$}
+
+Inheritance diagram for Dominio\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=11.000000cm]{class_dominio}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_dominio_a4df4d32136bed877313a4e2fb6374bb2}{validar}} (string valor)=0
+\item 
+virtual void \mbox{\hyperlink{class_dominio_aea378552550cebd05d51aeaa2727977d}{set\+Valor}} (string valor)=0
+\item 
+virtual string \mbox{\hyperlink{class_dominio_a445ece58be21622aeb7c730f53803a68}{get\+Valor}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaracao de classe abstrata para interface e padronizacao da criacao de Dominios. Uso de tipo string para uniformidade dos parametros. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_dominio_a445ece58be21622aeb7c730f53803a68}\index{Dominio@{Dominio}!getValor@{getValor}}
+\index{getValor@{getValor}!Dominio@{Dominio}}
+\doxysubsubsection{\texorpdfstring{getValor()}{getValor()}}
+{\footnotesize\ttfamily \label{class_dominio_a445ece58be21622aeb7c730f53803a68} 
+virtual string Dominio\+::get\+Valor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Metodo para obtencao do valor guardado a ser implementado pela classe herdada.\begin{DoxyReturn}{Returns}
+Retorno do valor guardado. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_codigo_de_pagamento_a9e5d9fb368143c42108dc0c2f4919bb6}{Codigo\+De\+Pagamento}}, \mbox{\hyperlink{class_codigo_de_titulo_a1abed19122ce43b76a1b6966a86180f2}{Codigo\+De\+Titulo}}, \mbox{\hyperlink{class_cpf_ad2f820ec95bd74e724a06e9be32b7060}{Cpf}}, \mbox{\hyperlink{class_data_a3a5b277f886d4e072bf2d1fafa94f88d}{Data}}, \mbox{\hyperlink{class_dinheiro_ad0bb22ecc4474e5467bdab05c7672713}{Dinheiro}}, \mbox{\hyperlink{class_estado_ac7eb7db6d9c19b8b993dd923c279979f}{Estado}}, \mbox{\hyperlink{class_nome_ac580b877d2075925172746cd21ffab91}{Nome}}, \mbox{\hyperlink{class_percentual_a2af03dfedb943704861ed13e75ad6980}{Percentual}}, \mbox{\hyperlink{class_senha_a900891c1b52580556ad2718c1cbabf71}{Senha}}, and \mbox{\hyperlink{class_setor_acd6ff0102757e581c039d01a710d0859}{Setor}}.
+
+\Hypertarget{class_dominio_aea378552550cebd05d51aeaa2727977d}\index{Dominio@{Dominio}!setValor@{setValor}}
+\index{setValor@{setValor}!Dominio@{Dominio}}
+\doxysubsubsection{\texorpdfstring{setValor()}{setValor()}}
+{\footnotesize\ttfamily \label{class_dominio_aea378552550cebd05d51aeaa2727977d} 
+virtual void Dominio\+::set\+Valor (\begin{DoxyParamCaption}\item[{string}]{valor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Metodo para atribuicao de valor valido a ser implementado pela classe herdada.
+\begin{DoxyParams}{Parameters}
+{\em valor} & Valor a ser guardado. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_codigo_de_pagamento_a7251874bef394ce1e5f59acf8f35f0c5}{Codigo\+De\+Pagamento}}, \mbox{\hyperlink{class_codigo_de_titulo_a4a046c18126bfc3bb4afafb3e6d82dcd}{Codigo\+De\+Titulo}}, \mbox{\hyperlink{class_cpf_aa2e257f955dd0975462ff908ffcc2869}{Cpf}}, \mbox{\hyperlink{class_data_aa8b1123f63566c2db123607c561aec2b}{Data}}, \mbox{\hyperlink{class_dinheiro_a55823dfd0662fb38844fad20059d5d04}{Dinheiro}}, \mbox{\hyperlink{class_estado_a1e25be44b32c5fbf5b0be1019770277b}{Estado}}, \mbox{\hyperlink{class_nome_a9301d75b5652c00be943926a567c62d2}{Nome}}, \mbox{\hyperlink{class_percentual_a109d343974612bf38239dbf8623b364b}{Percentual}}, \mbox{\hyperlink{class_senha_afeeaa0f2602a12ba58b03fac9eff2de2}{Senha}}, and \mbox{\hyperlink{class_setor_ab7e96a9210070fd1769d8dcf080360fc}{Setor}}.
+
+\Hypertarget{class_dominio_a4df4d32136bed877313a4e2fb6374bb2}\index{Dominio@{Dominio}!validar@{validar}}
+\index{validar@{validar}!Dominio@{Dominio}}
+\doxysubsubsection{\texorpdfstring{validar()}{validar()}}
+{\footnotesize\ttfamily \label{class_dominio_a4df4d32136bed877313a4e2fb6374bb2} 
+virtual void Dominio\+::validar (\begin{DoxyParamCaption}\item[{string}]{valor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Metodo para validacao que pode lancar excecao a ser implementado pela classe herdada.
+\begin{DoxyParams}{Parameters}
+{\em valor} & Valor a ser validado antes de guardado. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_codigo_de_pagamento_ac8be99ce2ff7a48cfe0a32fba09b5ac2}{Codigo\+De\+Pagamento}}, \mbox{\hyperlink{class_codigo_de_titulo_aef4f6068d222356eb608c9b10ca77303}{Codigo\+De\+Titulo}}, \mbox{\hyperlink{class_cpf_a8312d2a1cb2671aa5bbacac51f4ab1d4}{Cpf}}, \mbox{\hyperlink{class_data_afc6abc56a0307c22237cc9fbcdeff457}{Data}}, \mbox{\hyperlink{class_dinheiro_a1d1704a7df537be2d559af6051478758}{Dinheiro}}, \mbox{\hyperlink{class_estado_a65be0bdc5aef994e894280659ccd40c9}{Estado}}, \mbox{\hyperlink{class_nome_ada557d4ffc2dd7ab2bd0a9dcf7879b5c}{Nome}}, \mbox{\hyperlink{class_percentual_ab26fe8b19d7e358f7ed3ae92e068bd4f}{Percentual}}, \mbox{\hyperlink{class_senha_a40ba297d2cdc268f3fbffdbcd946bb2b}{Senha}}, and \mbox{\hyperlink{class_setor_aa755e17cd95ef7383e9a4e2ad83c84a1}{Setor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Usuario/\+Desktop/\+Duarte/\+Downloads/\+Antonio Paulo/\+Estudos/\+TP1/\+Projeto\+TP1/\+Projeto-\/\+TP1/\+Projeto-\/\+TP1/\mbox{\hyperlink{_dominios_8h}{Dominios.\+h}}\end{DoxyCompactItemize}

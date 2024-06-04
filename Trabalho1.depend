@@ -24,10 +24,10 @@
 1716410072 source:c:\users\usuario\trabalho_1 (tp1)\trabalho1\dominios.cpp
 	"Dominios.h"
 
-1717022318 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\dominios.cpp
+1717512341 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\dominios.cpp
 	"Dominios.h"
 
-1717017618 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\dominios.h
+1717540519 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\dominios.h
 	<iostream>
 	<stdexcept>
 	<regex>
@@ -38,25 +38,25 @@
 	<sstream>
 	<vector>
 
-1717022585 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\teste.cpp
+1717512341 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\teste.cpp
 	"Teste.h"
 	"Dominios.h"
 
-1717021931 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\teste.h
+1717540519 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\teste.h
 	<string>
 	<functional>
 	"Dominios.h"
 	"Entidades.h"
 
-1717022425 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\main.cpp
+1717512341 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\main.cpp
 	"Dominios.h"
 	"Teste.h"
 	"Entidades.h"
 
-1717022054 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\entidades.h
+1717540519 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\entidades.h
 	"Dominios.h"
 
-1717022054 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\entidades.cpp
+1717512341 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\entidades.cpp
 	"Entidades.h"
 
 1716675641 source:d:\tp1\projeto-tp1\dominios.cpp

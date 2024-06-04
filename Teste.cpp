@@ -2,7 +2,7 @@
 #include "Dominios.h"
 using namespace std;
 
-/// Método para execução dos testes de valor válido e inválido e retorno do estado em forma de inteiro.
+/// Metodo para execucao dos Testes de valor valido e invalido e retorno do estado em forma de inteiro.
 
 int UnidadeTeste::executar() {
     testeValido();
@@ -10,7 +10,7 @@ int UnidadeTeste::executar() {
     return estado;
 };
 
-/// Implementações dos testes com valor válido e valor inválido para cada dominio.
+// Implementacoes dos testes com valor valido e valor invalido para cada Dominio.
 
 void UTPercentual::testeValido() {
     try {
@@ -241,7 +241,7 @@ void UTSetor::testeInvalido() {
 };
 
 //---------------------------------------------------------------------------------------------------
-/// Implementações dos Testes de Entidade.
+// Implementacoes dos Testes de Entidade.
 
 bool TEPagamento::testeEntidade() {
     CodigoDePagamento codigoTeste;

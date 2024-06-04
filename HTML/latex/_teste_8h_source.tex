@@ -1,0 +1,201 @@
+\doxysection{Teste.\+h}
+\hypertarget{_teste_8h_source}{}\label{_teste_8h_source}\index{C:/Users/Usuario/Desktop/Duarte/Downloads/Antonio Paulo/Estudos/TP1/ProjetoTP1/Projeto-\/TP1/Projeto-\/TP1/Teste.h@{C:/Users/Usuario/Desktop/Duarte/Downloads/Antonio Paulo/Estudos/TP1/ProjetoTP1/Projeto-\/TP1/Projeto-\/TP1/Teste.h}}
+\mbox{\hyperlink{_teste_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TESTE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TESTE\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_dominios_8h}{Dominios.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_entidades_8h}{Entidades.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_unidade_teste}{UnidadeTeste}}\ \{\ \textcolor{comment}{//\ 190084499}}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_unidade_teste}{\string~UnidadeTeste}}()\ =\ \textcolor{keywordflow}{default};\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_unidade_teste_ae062bdfca0140336c212fcfea2f13817}{testeValido}}()\ =\ 0;\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_unidade_teste_a60c3668557607ee1545c0b1fbfcffa2c}{testeInvalido}}()\ =\ 0;\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{class_unidade_teste_a53f3d17a788893916764dccdf5537a37}{FALHA}}\ =\ 0;\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{class_unidade_teste_a2c030b34b352bdf4ad927d1ce48a568d}{SUCESSO}}\ =\ 1;\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_unidade_teste_a81aba7bf0ab6fabeac055e013cec5c36}{estado}};\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_unidade_teste_a68eb44d72202d7b819aab4a6ab7c3f38}{executar}}();}
+\DoxyCodeLine{00024\ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ Declaracoes\ dos\ Testes\ de\ Unidade\ dos\ Dominios.}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_t_percentual}{UTPercentual}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unidade_teste}{UnidadeTeste}}\ \{\ \textcolor{comment}{//\ 190084499}}
+\DoxyCodeLine{00031\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_dominio}{Dominio}}*\ instancia;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_VALIDO\ =\ \textcolor{stringliteral}{"{}30"{}};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_INVALIDO\ =\ \textcolor{stringliteral}{"{}101"{}};}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_u_t_percentual}{\string~UTPercentual}}()\ \{\textcolor{keyword}{delete}\ instancia;\}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_u_t_percentual}{UTPercentual}}(\mbox{\hyperlink{class_dominio}{Dominio}}*\ instancia)\ :\ instancia(instancia)\ \{\mbox{\hyperlink{class_unidade_teste_a81aba7bf0ab6fabeac055e013cec5c36}{estado}}\ =\ \mbox{\hyperlink{class_unidade_teste_a2c030b34b352bdf4ad927d1ce48a568d}{SUCESSO}};\};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_t_percentual_a962d362fdf3af7c2d0bba4bcdc6fd617}{testeValido}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_t_percentual_a08856e5c8927b884b0e8013b60f1de12}{testeInvalido}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_t_monetario}{UTMonetario}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unidade_teste}{UnidadeTeste}}\ \{\ \textcolor{comment}{//\ 190084499}}
+\DoxyCodeLine{00047\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_dominio}{Dominio}}*\ instancia;}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_VALIDO\ =\ \textcolor{stringliteral}{"{}2.52"{}};}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_INVALIDO\ =\ \textcolor{stringliteral}{"{}-\/1.50"{}};}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_u_t_monetario}{\string~UTMonetario}}()\ \{\textcolor{keyword}{delete}\ instancia;\}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_u_t_monetario}{UTMonetario}}(\mbox{\hyperlink{class_dominio}{Dominio}}*\ instancia)\ :\ instancia(instancia)\ \{\mbox{\hyperlink{class_unidade_teste_a81aba7bf0ab6fabeac055e013cec5c36}{estado}}\ =\ \mbox{\hyperlink{class_unidade_teste_a2c030b34b352bdf4ad927d1ce48a568d}{SUCESSO}};\};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_t_monetario_ae4c9b64bf3beeadbf523e19a8b5e533a}{testeValido}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_t_monetario_ac5402efb2f73c3eb4f61aab3c8024f4c}{testeInvalido}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_t_cd_pagamento}{UTCdPagamento}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unidade_teste}{UnidadeTeste}}\ \{\ \textcolor{comment}{//\ 190084499}}
+\DoxyCodeLine{00063\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{class_dominio}{Dominio}}*\ instancia;}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_VALIDO\ =\ \textcolor{stringliteral}{"{}12345678"{}};}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_INVALIDO\ =\ \textcolor{stringliteral}{"{}01234567"{}};}
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{class_u_t_cd_pagamento}{\string~UTCdPagamento}}()\ \{\textcolor{keyword}{delete}\ instancia;\};}
+\DoxyCodeLine{00068\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{class_u_t_cd_pagamento}{UTCdPagamento}}(\mbox{\hyperlink{class_dominio}{Dominio}}*\ instancia)\ :\ instancia(instancia)\ \{\mbox{\hyperlink{class_unidade_teste_a81aba7bf0ab6fabeac055e013cec5c36}{estado}}\ =\ \mbox{\hyperlink{class_unidade_teste_a2c030b34b352bdf4ad927d1ce48a568d}{SUCESSO}};\};}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_t_cd_pagamento_a1dce07e15d4eb7e06f44f6f6a5aff96a}{testeValido}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_t_cd_pagamento_a365d91f4da2bb7dd20815432a63f002c}{testeInvalido}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00072\ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_t_cd_titulo}{UTCdTitulo}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unidade_teste}{UnidadeTeste}}\ \{\ \textcolor{comment}{//\ 190084499}}
+\DoxyCodeLine{00078\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{class_dominio}{Dominio}}*\ instancia;}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_VALIDO\ =\ \textcolor{stringliteral}{"{}CDB12345678"{}};}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_INVALIDO\ =\ \textcolor{stringliteral}{"{}TES01234567"{}};}
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{class_u_t_cd_titulo}{\string~UTCdTitulo}}()\ \{\textcolor{keyword}{delete}\ instancia;\};}
+\DoxyCodeLine{00083\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{class_u_t_cd_titulo}{UTCdTitulo}}(\mbox{\hyperlink{class_dominio}{Dominio}}*\ instancia)\ :\ instancia(instancia)\ \{\mbox{\hyperlink{class_unidade_teste_a81aba7bf0ab6fabeac055e013cec5c36}{estado}}\ =\ \mbox{\hyperlink{class_unidade_teste_a2c030b34b352bdf4ad927d1ce48a568d}{SUCESSO}};\};}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_t_cd_titulo_a4c41f9be92982004d81ed1c4ef806754}{testeValido}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_t_cd_titulo_a3a96fb6bf895c3b393df3ceb0d6071d7}{testeInvalido}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00087\ \};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_t_c_p_f}{UTCPF}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unidade_teste}{UnidadeTeste}}\ \{\ \textcolor{comment}{//\ 190084499}}
+\DoxyCodeLine{00093\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00094\ \ \ \ \ \mbox{\hyperlink{class_dominio}{Dominio}}*\ instancia;}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_VALIDO\ =\ \textcolor{stringliteral}{"{}529.982.247-\/25"{}};}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_INVALIDO\ =\ \textcolor{stringliteral}{"{}123.456.789.09"{}};}
+\DoxyCodeLine{00097\ \ \ \ \ \mbox{\hyperlink{class_u_t_c_p_f}{\string~UTCPF}}()\ \{\textcolor{keyword}{delete}\ instancia;\};}
+\DoxyCodeLine{00098\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{class_u_t_c_p_f}{UTCPF}}(\mbox{\hyperlink{class_dominio}{Dominio}}*\ instancia)\ :\ instancia(instancia)\ \{\mbox{\hyperlink{class_unidade_teste_a81aba7bf0ab6fabeac055e013cec5c36}{estado}}\ =\ \mbox{\hyperlink{class_unidade_teste_a2c030b34b352bdf4ad927d1ce48a568d}{SUCESSO}};\};}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_t_c_p_f_af65564a0d3a0298dcbaee24a17d10c6e}{testeValido}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_t_c_p_f_a80f6abfda144faf58673ef99cca4ee4c}{testeInvalido}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00102\ \};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_t_data}{UTData}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unidade_teste}{UnidadeTeste}}\ \{\ \textcolor{comment}{//\ 190084499}}
+\DoxyCodeLine{00108\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00109\ \ \ \ \ \mbox{\hyperlink{class_dominio}{Dominio}}*\ instancia;}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_VALIDO\ =\ \textcolor{stringliteral}{"{}29-\/02-\/2024"{}};}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_INVALIDO\ =\ \textcolor{stringliteral}{"{}31-\/04-\/2023"{}};}
+\DoxyCodeLine{00112\ \ \ \ \ \mbox{\hyperlink{class_u_t_data}{\string~UTData}}()\ \{\textcolor{keyword}{delete}\ instancia;\};}
+\DoxyCodeLine{00113\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00114\ \ \ \ \ \mbox{\hyperlink{class_u_t_data}{UTData}}(\mbox{\hyperlink{class_dominio}{Dominio}}*\ instancia)\ :\ instancia(instancia)\ \{\mbox{\hyperlink{class_unidade_teste_a81aba7bf0ab6fabeac055e013cec5c36}{estado}}\ =\ \mbox{\hyperlink{class_unidade_teste_a2c030b34b352bdf4ad927d1ce48a568d}{SUCESSO}};\};}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_t_data_a7edf4e8565efea30951396d4819a5d3d}{testeValido}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_t_data_a43256111153d7edbd52e70b2da85dd50}{testeInvalido}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00117\ \};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_t_estado}{UTEstado}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unidade_teste}{UnidadeTeste}}\ \{\ \textcolor{comment}{//\ 190084499}}
+\DoxyCodeLine{00123\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{class_dominio}{Dominio}}*\ instancia;}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_VALIDO\ =\ \textcolor{stringliteral}{"{}Inadimplente"{}};}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_INVALIDO\ =\ \textcolor{stringliteral}{"{}Imprevisto"{}};}
+\DoxyCodeLine{00127\ \ \ \ \ \mbox{\hyperlink{class_u_t_estado}{\string~UTEstado}}()\ \{\textcolor{keyword}{delete}\ instancia;\};}
+\DoxyCodeLine{00128\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00129\ \ \ \ \ \mbox{\hyperlink{class_u_t_estado}{UTEstado}}(\mbox{\hyperlink{class_dominio}{Dominio}}*\ instancia)\ :\ instancia(instancia)\ \{\mbox{\hyperlink{class_unidade_teste_a81aba7bf0ab6fabeac055e013cec5c36}{estado}}\ =\ \mbox{\hyperlink{class_unidade_teste_a2c030b34b352bdf4ad927d1ce48a568d}{SUCESSO}};\};}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_t_estado_aa992ace577b63e03d5e693cacb9f7bda}{testeValido}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_t_estado_af3883dc0879a18e8c29a911ee93ff131}{testeInvalido}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00132\ \};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_t_nome}{UTNome}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unidade_teste}{UnidadeTeste}}\ \{}
+\DoxyCodeLine{00138\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00139\ \ \ \ \ \mbox{\hyperlink{class_dominio}{Dominio}}*\ instancia;}
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_VALIDO\ =\ \textcolor{stringliteral}{"{}Tiago\ Nunes"{}};}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_INVALIDO\ =\ \textcolor{stringliteral}{"{}tiago\ nunes"{}};}
+\DoxyCodeLine{00142\ \ \ \ \ \mbox{\hyperlink{class_u_t_nome}{\string~UTNome}}()\ \{\textcolor{keyword}{delete}\ instancia;\};}
+\DoxyCodeLine{00143\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00144\ \ \ \ \ \mbox{\hyperlink{class_u_t_nome}{UTNome}}(\mbox{\hyperlink{class_dominio}{Dominio}}*\ instancia)\ :\ instancia(instancia)\ \{\mbox{\hyperlink{class_unidade_teste_a81aba7bf0ab6fabeac055e013cec5c36}{estado}}\ =\ \mbox{\hyperlink{class_unidade_teste_a2c030b34b352bdf4ad927d1ce48a568d}{SUCESSO}};\};}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_t_nome_a1f9bd7385f2aa9d960c04a706b28be85}{testeValido}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_t_nome_a11377e5cab380d35f23c293c0076cf60}{testeInvalido}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00147\ \};}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_t_senha}{UTSenha}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unidade_teste}{UnidadeTeste}}\ \{}
+\DoxyCodeLine{00153\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00154\ \ \ \ \ \mbox{\hyperlink{class_dominio}{Dominio}}*\ instancia;}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_VALIDO\ =\ \textcolor{stringliteral}{"{}184302"{}};}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_INVALIDO\ =\ \textcolor{stringliteral}{"{}123456"{}};}
+\DoxyCodeLine{00157\ \ \ \ \ \mbox{\hyperlink{class_u_t_senha}{\string~UTSenha}}()\ \{\textcolor{keyword}{delete}\ instancia;\};}
+\DoxyCodeLine{00158\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00159\ \ \ \ \ \mbox{\hyperlink{class_u_t_senha}{UTSenha}}(\mbox{\hyperlink{class_dominio}{Dominio}}*\ instancia)\ :\ instancia(instancia)\ \{\mbox{\hyperlink{class_unidade_teste_a81aba7bf0ab6fabeac055e013cec5c36}{estado}}\ =\ \mbox{\hyperlink{class_unidade_teste_a2c030b34b352bdf4ad927d1ce48a568d}{SUCESSO}};\};}
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_t_senha_a93c3989416c0a6856d5c80fa0a7c5182}{testeValido}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_t_senha_a3dd3c6bb31c93c3dd3faf205208ee44f}{testeInvalido}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00162\ \};}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_t_setor}{UTSetor}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unidade_teste}{UnidadeTeste}}\ \{}
+\DoxyCodeLine{00168\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00169\ \ \ \ \ \mbox{\hyperlink{class_dominio}{Dominio}}*\ instancia;}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_VALIDO\ =\ \textcolor{stringliteral}{"{}Agricultura"{}};}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_INVALIDO\ =\ \textcolor{stringliteral}{"{}mineracao"{}};}
+\DoxyCodeLine{00172\ \ \ \ \ \mbox{\hyperlink{class_u_t_setor}{\string~UTSetor}}()\ \{\textcolor{keyword}{delete}\ instancia;\};}
+\DoxyCodeLine{00173\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00174\ \ \ \ \ \mbox{\hyperlink{class_u_t_setor}{UTSetor}}(\mbox{\hyperlink{class_dominio}{Dominio}}*\ instancia)\ :\ instancia(instancia)\ \{\mbox{\hyperlink{class_unidade_teste_a81aba7bf0ab6fabeac055e013cec5c36}{estado}}\ =\ \mbox{\hyperlink{class_unidade_teste_a2c030b34b352bdf4ad927d1ce48a568d}{SUCESSO}};\};}
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_t_setor_a250d5391cf81818f9066392b718ab11a}{testeValido}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_t_setor_afe86569ebd222828040aa42d775c50b2}{testeInvalido}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00177\ \};}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_teste_entidade}{TesteEntidade}}\ \{\ \textcolor{comment}{//\ 190084499}}
+\DoxyCodeLine{00183\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_teste_entidade}{\string~TesteEntidade}}()\ =\ \textcolor{keywordflow}{default};\ }
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_teste_entidade_a4d8dd1bb3f0a95178c373fc878ba49b0}{testeEntidade}}()\ =\ 0;}
+\DoxyCodeLine{00187\ \};}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \textcolor{comment}{//\ Declaracoes\ dos\ Testes\ de\ Unidade\ das\ Entidades.}}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_t_e_pagamento}{TEPagamento}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_teste_entidade}{TesteEntidade}}\ \{\ \textcolor{comment}{//\ 190084499}}
+\DoxyCodeLine{00194\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00195\ \ \ \ \ \mbox{\hyperlink{class_pagamento}{Pagamento}}*\ instancia;}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_TESTE\_CDP\ =\ \textcolor{stringliteral}{"{}12312312"{}};}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_TESTE\_DATA\ =\ \textcolor{stringliteral}{"{}31-\/12-\/2000"{}};}
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_TESTE\_PER\ =\ \textcolor{stringliteral}{"{}50"{}};}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_TESTE\_EST\ =\ \textcolor{stringliteral}{"{}Previsto"{}};}
+\DoxyCodeLine{00200\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00201\ \ \ \ \ \mbox{\hyperlink{class_t_e_pagamento}{TEPagamento}}(\mbox{\hyperlink{class_pagamento}{Pagamento}}*\ instancia)\ :\ instancia(instancia)\ \{\};}
+\DoxyCodeLine{00202\ \ \ \ \ \mbox{\hyperlink{class_t_e_pagamento}{\string~TEPagamento}}()\ \{\textcolor{keyword}{delete}\ instancia;\};}
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_t_e_pagamento_a69a669f2fa7d675dc91dec3de47cf054}{testeEntidade}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00204\ \};}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00209\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_t_e_titulo}{TETitulo}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_teste_entidade}{TesteEntidade}}\ \{\ \textcolor{comment}{//\ 190084499}}
+\DoxyCodeLine{00210\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00211\ \ \ \ \ \mbox{\hyperlink{class_titulo}{Titulo}}*\ instancia;}
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_TESTE\_CDT\ =\ \textcolor{stringliteral}{"{}LCA123BC67Z"{}};}
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_TESTE\_NOME\ =\ \textcolor{stringliteral}{"{}Antonio\ Paulo"{}};}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_TESTE\_SETOR\ =\ \textcolor{stringliteral}{"{}Química\ e\ petroquímica"{}};}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_TESTE\_EMISSAO\ =\ \textcolor{stringliteral}{"{}29-\/05-\/2024"{}};}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_TESTE\_VENC\ =\ \textcolor{stringliteral}{"{}01-\/06-\/2024"{}};}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_TESTE\_DINHEIRO\ =\ \textcolor{stringliteral}{"{}500.70"{}};}
+\DoxyCodeLine{00218\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00219\ \ \ \ \ \mbox{\hyperlink{class_t_e_titulo}{TETitulo}}(\mbox{\hyperlink{class_titulo}{Titulo}}*\ instancia)\ :\ instancia(instancia)\ \{\};}
+\DoxyCodeLine{00220\ \ \ \ \ \mbox{\hyperlink{class_t_e_titulo}{\string~TETitulo}}()\ \{\textcolor{keyword}{delete}\ instancia;\};}
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_t_e_titulo_a3d218afac56682b14c2c0e3fc4589cdc}{testeEntidade}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00222\ \};}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TESTE\_H}}
+
+\end{DoxyCode}

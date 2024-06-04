@@ -1,6 +1,6 @@
 #include "Entidades.h"
 
-/// Implementação dos métodos declarados pelas Entidades.
+// Implementacao dos metodos declarados pelas Entidades.
 
 void Pagamento::setId() {
     Id = codigo.getValor();
