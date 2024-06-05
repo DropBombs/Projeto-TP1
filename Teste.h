@@ -7,7 +7,7 @@
 
 using namespace std;
 
-/// Declaração de classe abstrata para interface de criação de testes de Dominio.
+/// DeclaraÃ§Ã£o de classe abstrata para interface de criaÃ§Ã£o de testes de Dominio.
 
 
 class UnidadeTeste {
@@ -16,12 +16,12 @@ public:
     virtual void testeValido() = 0;
     virtual void testeInvalido() = 0;
     static constexpr short FALHA = 0;
-    static constexpr short SUCESSO = 1; /// Declarações de constantes para identificação do estado.
+    static constexpr short SUCESSO = 1; /// DeclaraÃ§Ãµes de constantes para identificaÃ§Ã£o do estado.
     int estado;
-    int executar();  /// Função que chama a implementação específica de cada teste.
+    int executar();  /// FunÃ§Ã£o que chama a implementaÃ§Ã£o especÃ­fica de cada teste.
 };
 
-/// Declarações dos Testes de Unidade dos Dominios.
+/// DeclaraÃ§Ãµes dos Testes de Unidade dos Dominios.
 
 class UTPercentual : public UnidadeTeste {
 private:
@@ -146,7 +146,7 @@ public:
 };
 
 //---------------------------------------------------------------------------------------------------
-/// Declaração de classe abstrata para interface de criação de testes de Entidade.
+/// DeclaraÃ§Ã£o de classe abstrata para interface de criaÃ§Ã£o de testes de Entidade.
 
 class TesteEntidade {
 public:
@@ -154,7 +154,7 @@ public:
     virtual bool testeEntidade() = 0;
 };
 
-/// Declarações dos Testes de Unidade das Entidades.
+/// DeclaraÃ§Ãµes dos Testes de Unidade das Entidades.
 
 class TEPagamento : public TesteEntidade {
 private:
@@ -174,13 +174,25 @@ private:
     Titulo* instancia;
     string const VALOR_TESTE_CDT = "LCA123BC67Z";
     string const VALOR_TESTE_NOME = "Antonio Paulo";
-    string const VALOR_TESTE_SETOR = "Química e petroquímica";
+    string const VALOR_TESTE_SETOR = "QuÃ­mica e petroquÃ­mica";
     string const VALOR_TESTE_EMISSAO = "29-05-2024";
     string const VALOR_TESTE_VENC = "01-06-2024";
     string const VALOR_TESTE_DINHEIRO = "500.70";
 public:
     TETitulo(Titulo* instancia) : instancia(instancia) {};
     ~TETitulo() {delete instancia;};
+    bool testeEntidade() override;
+};
+
+class TEConta : public TesteEntidade {
+private:
+    Conta* instancia;
+    string const VALOR_TESTE_CPF = "";
+    string const VALOR_TESTE_NOME = "Tiago Nunes";
+    string const VALOR_TESTE_SENHA = "";
+public:
+    TEConta(Conta* instancia) : instancia(instancia) {};
+    ~TEConta() {delete instancia;};
     bool testeEntidade() override;
 };
 
