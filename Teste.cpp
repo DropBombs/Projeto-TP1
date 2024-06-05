@@ -2,7 +2,7 @@
 #include "Dominios.h"
 using namespace std;
 
-/// Método para execução dos testes de valor válido e inválido e retorno do estado em forma de inteiro.
+/// MÃ©todo para execuÃ§Ã£o dos testes de valor vÃ¡lido e invÃ¡lido e retorno do estado em forma de inteiro.
 
 int UnidadeTeste::executar() {
     testeValido();
@@ -10,7 +10,7 @@ int UnidadeTeste::executar() {
     return estado;
 };
 
-/// Implementações dos testes com valor válido e valor inválido para cada dominio.
+/// ImplementaÃ§Ãµes dos testes com valor vÃ¡lido e valor invÃ¡lido para cada dominio.
 
 void UTPercentual::testeValido() {
     try {
@@ -241,14 +241,14 @@ void UTSetor::testeInvalido() {
 };
 
 //---------------------------------------------------------------------------------------------------
-/// Implementações dos Testes de Entidade.
+/// ImplementaÃ§Ãµes dos Testes de Entidade.
 
 bool TEPagamento::testeEntidade() {
     CodigoDePagamento codigoTeste;
     codigoTeste.setValor(VALOR_TESTE_CDP);
     instancia->setCodigoPagamento(codigoTeste);
     if (instancia->getCodigoPagamento().getValor() != VALOR_TESTE_CDP) {
-        cout << "Erro ao inicializar Código de Pagamento";
+        cout << "Erro ao inicializar CÃ³digo de Pagamento";
         return false;
     };
 
@@ -272,7 +272,7 @@ bool TEPagamento::testeEntidade() {
     estadoTeste.setValor(VALOR_TESTE_EST);
     instancia->setEstado(estadoTeste);
     if (instancia->getEstado().getValor() != VALOR_TESTE_EST) {
-        cout << "Erro ao inicializar Código de Pagamento";
+        cout << "Erro ao inicializar CÃ³digo de Pagamento";
         return false;
     };
 
@@ -286,7 +286,7 @@ bool TETitulo::testeEntidade() {
     codigoTeste.setValor(VALOR_TESTE_CDT);
     instancia->setCodigoTitulo(codigoTeste);
     if (instancia->getCodigoTitulo().getValor() != VALOR_TESTE_CDT) {
-        cout << "Erro ao inicializar Código de Titulo.";
+        cout << "Erro ao inicializar CÃ³digo de Titulo.";
         return false;
     };
 
@@ -334,3 +334,29 @@ bool TETitulo::testeEntidade() {
 };
 
 //---------------------------------------------------------------------------------------------------
+
+bool TEConta::testeEntidade() {
+    Cpf cpfTeste;
+    cpfTeste.setValor(VALOR_TESTE_CPF);
+    instancia->setCpf(cpfTeste);
+    if (instancia->getCpf().getValor() != VALOR_TESTE_CPF) {
+        cout << "Erro ao inicializar Cpf.";
+        return false;
+    };
+
+    Nome nomeTeste;
+    nomeTeste.setValor(VALOR_TESTE_NOME);
+    instancia->setNome(nomeTeste);
+    if (instancia->getNome().getValor() != VALOR_TESTE_NOME) {
+        cout << "Erro ao inicializar Nome.";
+        return false;
+    };
+
+    Senha senhaTeste;
+    senhaTeste.setValor(VALOR_TESTE_SENHA);
+    instancia->setSenha(senhaTeste);
+    if (instancia->getSenha().getValor() != VALOR_TESTE_SENHA) {
+        cout << "Erro ao inicializar Senha."
+        return false;
+    };
+};
