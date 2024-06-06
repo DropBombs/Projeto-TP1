@@ -4,12 +4,12 @@
 
 using namespace std;
 
-/// Funções para criação e teste dinâmicos dos domínios.
+/// FunÃ§Ãµes para criaÃ§Ã£o e teste dinÃ¢micos dos domÃ­nios.
 
-/// Função que mapeia o nome do dominio a um ponteiro para ele.
+/// FunÃ§Ã£o que mapeia o nome do dominio a um ponteiro para ele.
 
 Dominio* criarDominio(const string& tipo) {
-    map<string, function<Dominio*()>> fabricaDominios = {  /// Mapeia string a uma função lambda de criação de ponteiro.
+    map<string, function<Dominio*()>> fabricaDominios = {  /// Mapeia string a uma funÃ§Ã£o lambda de criaÃ§Ã£o de ponteiro.
         {"Dinheiro", []() {return new Dinheiro();}},
         {"Percentual", []() {return new Percentual();}},
         {"CodigoDePagamento", []() {return new CodigoDePagamento();}},
@@ -27,12 +27,12 @@ Dominio* criarDominio(const string& tipo) {
     if (aux != fabricaDominios.end()) {    /// Checa se foi encontrado o dominio.
         return aux->second();              /// Se sim, retorna o ponteiro criado.
     } else {
-        cout << "Dominio não encontrado." << endl;
-        return nullptr;                   /// Se não, retorna ponteiro nulo.
+        cout << "Dominio nÃ£o encontrado." << endl;
+        return nullptr;                   /// Se nÃ£o, retorna ponteiro nulo.
     };
 };
 
-/// Criação de Teste de Unidade baseado no Dominio escolhido.
+/// CriaÃ§Ã£o de Teste de Unidade baseado no Dominio escolhido.
 
 UnidadeTeste* criarUnidadeTeste(Dominio* dominio) {
     if (dynamic_cast<Dinheiro*>(dominio))
@@ -75,7 +75,7 @@ bool autoTeste(Dominio* testeDominio, UnidadeTeste* testeUnidade) {
     }
 };
 
-/// Loop para execução de testes em um conjunto de dominios, que termina o programa se falhar.
+/// Loop para execuÃ§Ã£o de testes em um conjunto de dominios, que termina o programa se falhar.
 
 void bateriaTestes(const vector<string>& tipoDominio) {
     for (const auto& tipo : tipoDominio) {
@@ -117,6 +117,10 @@ int main() {
     resultadoTeste = testeTitulo.testeEntidade();
     if (resultadoTeste)
         cout << "Sucesso nos testes de Titulo." << endl;
+
+    resultadoTeste = testeConta.testeEntidade();
+    if (resultadoTeste)
+        cout << "Sucesso nos teste de Conta." << endl;
     /// Exemplo.
 
     setor.setValor("Papel e celulose");
