@@ -103,7 +103,6 @@ int main() {
     Conta conta;
     TEConta testeConta(&conta);
 
-    Setor setor;
     bool resultadoTeste;
     // Executando os testes nos Dominios.
 
@@ -126,12 +125,6 @@ int main() {
     resultadoTeste = testeConta.testeEntidade();
     if (resultadoTeste)
         cout << "Sucesso nos testes de Conta." << endl;
-
-    // Exemplo.
-
-    setor.setValor("Papel e celulose");
-    titulo.setSetor(setor);
-    cout << titulo.getSetor().getValor();
 
     return 0;
 }
