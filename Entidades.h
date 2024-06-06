@@ -68,7 +68,7 @@ public:
 
 /// Entidade requerida, instanciando os Dominios definidos.
 
-class Conta : public Entidade {
+class Conta : public Entidade { //200060422
 private:
     Cpf cpf;
     Nome nome;

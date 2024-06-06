@@ -134,7 +134,7 @@ public:
 /// @brief Classe para Testes do Dominio Nome.
 /// @param instancia Ponteiro de tipo Nome para Teste.
 
-class UTNome : public UnidadeTeste {
+class UTNome : public UnidadeTeste { //200060422
 private:
     Dominio* instancia;
     string const VALOR_VALIDO = "Tiago Nunes";
@@ -149,7 +149,7 @@ public:
 /// @brief Classe para Testes do Dominio Senha.
 /// @param instancia Ponteiro de tipo Senha para Teste.
 
-class UTSenha : public UnidadeTeste {
+class UTSenha : public UnidadeTeste { //200060422
 private:
     Dominio* instancia;
     string const VALOR_VALIDO = "184302";
@@ -164,7 +164,7 @@ public:
 /// @brief Classe para Testes do Dominio Setor.
 /// @param instancia Ponteiro de tipo Setor para Teste.
 
-class UTSetor : public UnidadeTeste {
+class UTSetor : public UnidadeTeste { //200060422
 private:
     Dominio* instancia;
     string const VALOR_VALIDO = "Agricultura";
@@ -224,7 +224,7 @@ public:
 /// @brief Classe para Teste da Entidade Conta.
 /// @param instancia Ponteiro de tipo Conta para Teste.
 
-class TEConta : public TesteEntidade {
+class TEConta : public TesteEntidade { //200060422
 private:
     Conta* instancia;
     string const VALOR_TESTE_CPF = "390.229.170-29";
