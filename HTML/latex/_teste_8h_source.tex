@@ -196,6 +196,19 @@
 \DoxyCodeLine{00221\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_t_e_titulo_a3d218afac56682b14c2c0e3fc4589cdc}{testeEntidade}}()\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00222\ \};}
 \DoxyCodeLine{00223\ }
-\DoxyCodeLine{00224\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TESTE\_H}}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_t_e_conta}{TEConta}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_teste_entidade}{TesteEntidade}}\ \{}
+\DoxyCodeLine{00228\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00229\ \ \ \ \ \mbox{\hyperlink{class_conta}{Conta}}*\ instancia;}
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_TESTE\_CPF\ =\ \textcolor{stringliteral}{"{}390.229.170-\/29"{}};}
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_TESTE\_NOME\ =\ \textcolor{stringliteral}{"{}Tiago\ Nunes"{}};}
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{keywordtype}{string}\ \textcolor{keyword}{const}\ VALOR\_TESTE\_SENHA\ =\ \textcolor{stringliteral}{"{}132756"{}};}
+\DoxyCodeLine{00233\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00234\ \ \ \ \ \mbox{\hyperlink{class_t_e_conta}{TEConta}}(\mbox{\hyperlink{class_conta}{Conta}}*\ instancia)\ :\ instancia(instancia)\ \{\};}
+\DoxyCodeLine{00235\ \ \ \ \ \mbox{\hyperlink{class_t_e_conta}{\string~TEConta}}()\ \{\textcolor{keyword}{delete}\ instancia;\};}
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_t_e_conta_a7ecf64fe1088240d9072b9dfd0735f11}{testeEntidade}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00237\ \};}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TESTE\_H}}
 
 \end{DoxyCode}

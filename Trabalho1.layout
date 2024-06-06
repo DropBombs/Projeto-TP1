@@ -2,48 +2,76 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
+	<File name="Entidades.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1343" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="4" />
+			<Collapse line="8" />
+			<Collapse line="12" />
+			<Collapse line="16" />
+			<Collapse line="20" />
+			<Collapse line="26" />
+			<Collapse line="30" />
+			<Collapse line="34" />
+			<Collapse line="38" />
+			<Collapse line="42" />
+			<Collapse line="46" />
+			<Collapse line="50" />
+			<Collapse line="57" />
+			<Collapse line="61" />
+			<Collapse line="65" />
+			<Collapse line="69" />
+		</Folding>
+	</File>
+	<File name="Teste.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="7911" topLine="74" />
+		</Cursor>
+		<Folding>
+			<Collapse line="13" />
+			<Collapse line="29" />
+			<Collapse line="45" />
+			<Collapse line="61" />
+			<Collapse line="76" />
+			<Collapse line="91" />
+			<Collapse line="106" />
+			<Collapse line="121" />
+			<Collapse line="136" />
+			<Collapse line="151" />
+			<Collapse line="166" />
+			<Collapse line="181" />
+			<Collapse line="192" />
+			<Collapse line="208" />
+			<Collapse line="226" />
+		</Folding>
+	</File>
 	<File name="Entidades.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1484" topLine="8" />
+			<Cursor1 position="2336" topLine="0" />
 		</Cursor>
 		<Folding>
 			<Collapse line="10" />
 			<Collapse line="20" />
 			<Collapse line="42" />
+			<Collapse line="70" />
 		</Folding>
 	</File>
-	<File name="Dominios.cpp" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="6495" topLine="53" />
+			<Cursor1 position="95" topLine="18" />
 		</Cursor>
 		<Folding>
-			<Collapse line="4" />
-			<Collapse line="9" />
-			<Collapse line="17" />
-			<Collapse line="22" />
-			<Collapse line="30" />
+			<Collapse line="10" />
 			<Collapse line="35" />
-			<Collapse line="53" />
-			<Collapse line="58" />
-			<Collapse line="82" />
-			<Collapse line="87" />
-			<Collapse line="121" />
-			<Collapse line="126" />
-			<Collapse line="171" />
-			<Collapse line="176" />
-			<Collapse line="183" />
-			<Collapse line="198" />
-			<Collapse line="203" />
-			<Collapse line="229" />
-			<Collapse line="234" />
-			<Collapse line="273" />
-			<Collapse line="279" />
-			<Collapse line="284" />
+			<Collapse line="62" />
+			<Collapse line="78" />
 		</Folding>
 	</File>
 	<File name="Teste.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="611" topLine="6" />
+			<Cursor1 position="10355" topLine="0" />
 		</Cursor>
 		<Folding>
 			<Collapse line="6" />
@@ -73,7 +101,7 @@
 	</File>
 	<File name="Dominios.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="492" topLine="46" />
+			<Cursor1 position="492" topLine="49" />
 		</Cursor>
 		<Folding>
 			<Collapse line="19" />
@@ -89,54 +117,33 @@
 			<Collapse line="156" />
 		</Folding>
 	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Dominios.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4373" topLine="24" />
-		</Cursor>
-		<Folding>
-			<Collapse line="10" />
-			<Collapse line="36" />
-			<Collapse line="63" />
-			<Collapse line="79" />
-		</Folding>
-	</File>
-	<File name="Teste.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2825" topLine="9" />
-		</Cursor>
-		<Folding>
-			<Collapse line="29" />
-			<Collapse line="45" />
-			<Collapse line="61" />
-			<Collapse line="76" />
-			<Collapse line="91" />
-			<Collapse line="106" />
-			<Collapse line="121" />
-			<Collapse line="136" />
-			<Collapse line="151" />
-			<Collapse line="166" />
-			<Collapse line="181" />
-			<Collapse line="192" />
-			<Collapse line="208" />
-		</Folding>
-	</File>
-	<File name="Entidades.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="49" topLine="0" />
+			<Cursor1 position="6495" topLine="53" />
 		</Cursor>
 		<Folding>
 			<Collapse line="4" />
-			<Collapse line="8" />
-			<Collapse line="12" />
-			<Collapse line="16" />
-			<Collapse line="20" />
-			<Collapse line="26" />
+			<Collapse line="9" />
+			<Collapse line="17" />
+			<Collapse line="22" />
 			<Collapse line="30" />
-			<Collapse line="34" />
-			<Collapse line="38" />
-			<Collapse line="42" />
-			<Collapse line="46" />
-			<Collapse line="50" />
+			<Collapse line="35" />
+			<Collapse line="53" />
+			<Collapse line="58" />
+			<Collapse line="82" />
+			<Collapse line="87" />
+			<Collapse line="121" />
+			<Collapse line="126" />
+			<Collapse line="171" />
+			<Collapse line="176" />
+			<Collapse line="183" />
+			<Collapse line="198" />
+			<Collapse line="203" />
+			<Collapse line="229" />
+			<Collapse line="234" />
+			<Collapse line="273" />
+			<Collapse line="279" />
+			<Collapse line="284" />
 		</Folding>
 	</File>
 	<Target name="Debug" top="Dominios.h">

@@ -66,4 +66,23 @@ public:
     Dinheiro getDinheiro() const {return valor;};
 };
 
+/// Entidade requerida, instanciando os Dominios definidos.
+
+class Conta : public Entidade {
+private:
+    Cpf cpf;
+    Nome nome;
+    Senha senha;
+    string Id;
+public:
+    void setId() override;
+    string getId() override {return Id;};
+    void setCpf(const Cpf&);
+    Cpf getCpf() const {return cpf;};
+    void setNome(const Nome&);
+    Nome getNome() const {return nome;};
+    void setSenha(const Senha&);
+    Senha getSenha() const {return senha;};
+};
+
 #endif // ENTIDADES_H

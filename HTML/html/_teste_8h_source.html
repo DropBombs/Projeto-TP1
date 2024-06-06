@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Projeto TP1<span id="projectnumber">&#160;6.0</span>
+   <div id="projectname">Projeto TP1<span id="projectnumber">&#160;7.0</span>
    </div>
    <div id="projectbrief">Projeto para Disciplina de Técnicas de Programação 1</div>
   </td>
@@ -314,11 +314,29 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>};</div>
 </div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="preprocessor">#endif </span><span class="comment">// TESTE_H</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="foldopen" id="foldopen00227" data-start="{" data-end="};">
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="class_t_e_conta.html">  227</a></span><span class="keyword">class </span><a class="code hl_class" href="class_t_e_conta.html">TEConta</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_teste_entidade.html">TesteEntidade</a> {</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <a class="code hl_class" href="class_conta.html">Conta</a>* instancia;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <span class="keywordtype">string</span> <span class="keyword">const</span> VALOR_TESTE_CPF = <span class="stringliteral">&quot;390.229.170-29&quot;</span>;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="keywordtype">string</span> <span class="keyword">const</span> VALOR_TESTE_NOME = <span class="stringliteral">&quot;Tiago Nunes&quot;</span>;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="keywordtype">string</span> <span class="keyword">const</span> VALOR_TESTE_SENHA = <span class="stringliteral">&quot;132756&quot;</span>;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <a class="code hl_class" href="class_t_e_conta.html">TEConta</a>(<a class="code hl_class" href="class_conta.html">Conta</a>* instancia) : instancia(instancia) {};</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    <a class="code hl_class" href="class_t_e_conta.html">~TEConta</a>() {<span class="keyword">delete</span> instancia;};</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_t_e_conta.html#a7ecf64fe1088240d9072b9dfd0735f11">testeEntidade</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>};</div>
+</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="preprocessor">#endif </span><span class="comment">// TESTE_H</span></div>
 <div class="ttc" id="a_dominios_8h_html"><div class="ttname"><a href="_dominios_8h.html">Dominios.h</a></div><div class="ttdoc">Arquivo contendo os Dominios requeridos.</div></div>
 <div class="ttc" id="a_entidades_8h_html"><div class="ttname"><a href="_entidades_8h.html">Entidades.h</a></div><div class="ttdoc">Arquivo contendo as Entidades requeridas.</div></div>
+<div class="ttc" id="aclass_conta_html"><div class="ttname"><a href="class_conta.html">Conta</a></div><div class="ttdoc">Entidade requerida, instanciando os Dominios definidos.</div><div class="ttdef"><b>Definition</b> Entidades.h:71</div></div>
 <div class="ttc" id="aclass_dominio_html"><div class="ttname"><a href="class_dominio.html">Dominio</a></div><div class="ttdoc">Declaracao de classe abstrata para interface e padronizacao da criacao de Dominios....</div><div class="ttdef"><b>Definition</b> Dominios.h:20</div></div>
 <div class="ttc" id="aclass_pagamento_html"><div class="ttname"><a href="class_pagamento.html">Pagamento</a></div><div class="ttdoc">Entidade requerida, instanciando os Dominios definidos.</div><div class="ttdef"><b>Definition</b> Entidades.h:21</div></div>
+<div class="ttc" id="aclass_t_e_conta_html"><div class="ttname"><a href="class_t_e_conta.html">TEConta</a></div><div class="ttdoc">Classe para Teste da Entidade Conta.</div><div class="ttdef"><b>Definition</b> Teste.h:227</div></div>
+<div class="ttc" id="aclass_t_e_conta_html_a7ecf64fe1088240d9072b9dfd0735f11"><div class="ttname"><a href="class_t_e_conta.html#a7ecf64fe1088240d9072b9dfd0735f11">TEConta::testeEntidade</a></div><div class="ttdeci">bool testeEntidade() override</div><div class="ttdef"><b>Definition</b> Teste.cpp:338</div></div>
 <div class="ttc" id="aclass_t_e_pagamento_html"><div class="ttname"><a href="class_t_e_pagamento.html">TEPagamento</a></div><div class="ttdoc">Classe para Teste da Entidade Pagamento.</div><div class="ttdef"><b>Definition</b> Teste.h:193</div></div>
 <div class="ttc" id="aclass_t_e_pagamento_html_a69a669f2fa7d675dc91dec3de47cf054"><div class="ttname"><a href="class_t_e_pagamento.html#a69a669f2fa7d675dc91dec3de47cf054">TEPagamento::testeEntidade</a></div><div class="ttdeci">bool testeEntidade() override</div><div class="ttdef"><b>Definition</b> Teste.cpp:246</div></div>
 <div class="ttc" id="aclass_t_e_titulo_html"><div class="ttname"><a href="class_t_e_titulo.html">TETitulo</a></div><div class="ttdoc">Classe para Teste da Entidade Titulo.</div><div class="ttdef"><b>Definition</b> Teste.h:209</div></div>

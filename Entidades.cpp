@@ -49,5 +49,24 @@ void Titulo::setDataVencimento(const Data& data) {
 };
 
 void Titulo::setDinheiro(const Dinheiro& valor) {
+
     this->valor = valor;
+};
+
+//---------------------------------------------------------------------------------------------------
+
+void Conta::setId() {
+    Id = cpf.getValor();
+};
+
+void Conta::setCpf(const Cpf& cpf) {
+    this->cpf = cpf;
+};
+
+void Conta::setNome(const Nome& nome) {
+    this->nome = nome;
+};
+
+void Conta::setSenha(const Senha& senha) {
+    this->senha = senha;
 };

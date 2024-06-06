@@ -334,3 +334,29 @@ bool TETitulo::testeEntidade() {
 };
 
 //---------------------------------------------------------------------------------------------------
+
+bool TEConta::testeEntidade() {
+    Cpf cpfTeste;
+    cpfTeste.setValor(VALOR_TESTE_CPF);
+    instancia->setCpf(cpfTeste);
+    if (instancia->getCpf().getValor() != VALOR_TESTE_CPF) {
+        cout << "Erro ao inicializar Cpf.";
+        return false;
+    };
+
+    Nome nomeTeste;
+    nomeTeste.setValor(VALOR_TESTE_NOME);
+    instancia->setNome(nomeTeste);
+    if (instancia->getNome().getValor() != VALOR_TESTE_NOME) {
+        cout << "Erro ao inicializar Nome.";
+        return false;
+    };
+
+    Senha senhaTeste;
+    senhaTeste.setValor(VALOR_TESTE_SENHA);
+    instancia->setSenha(senhaTeste);
+    if (instancia->getSenha().getValor() != VALOR_TESTE_SENHA) {
+        cout << "Erro ao inicializar Senha.";
+        return false;
+    };
+};

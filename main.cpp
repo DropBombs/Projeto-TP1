@@ -4,9 +4,9 @@
 
 using namespace std;
 
-/// Funcoes para criacao e teste dinamicos dos Dominios.
+// Funcoes para criacao e teste dinamicos dos Dominios.
 
-/// Funcao que mapeia o nome do Dominio a um ponteiro para ele.
+// Funcao que mapeia o nome do Dominio a um ponteiro para ele.
 
 Dominio* criarDominio(const string& tipo) {
     map<string, function<Dominio*()>> fabricaDominios = {  /// Mapeia string a uma função lambda de criação de ponteiro.
@@ -20,15 +20,14 @@ Dominio* criarDominio(const string& tipo) {
         {"Nome", []() {return new Nome();}},
         {"Senha", []() {return new Senha();}},
         {"Setor", []() {return new Setor();}}
-        /// Adicionar outros dominios.
     };
 
-    auto aux = fabricaDominios.find(tipo); /// Procura o dominio desejado.
-    if (aux != fabricaDominios.end()) {    /// Checa se foi encontrado o dominio.
-        return aux->second();              /// Se sim, retorna o ponteiro criado.
+    auto aux = fabricaDominios.find(tipo); // Procura o dominio desejado.
+    if (aux != fabricaDominios.end()) {    // Checa se foi encontrado o dominio.
+        return aux->second();              // Se sim, retorna o ponteiro criado.
     } else {
         cout << "Dominio não encontrado." << endl;
-        return nullptr;                   /// Se não, retorna ponteiro nulo.
+        return nullptr;                   // Se não, retorna ponteiro nulo.
     };
 };
 
@@ -97,8 +96,13 @@ void bateriaTestes(const vector<string>& tipoDominio) {
 int main() {
     Pagamento pagamento;
     TEPagamento testePagamento(&pagamento);
+
     Titulo titulo;
     TETitulo testeTitulo(&titulo);
+
+    Conta conta;
+    TEConta testeConta(&conta);
+
     Setor setor;
     bool resultadoTeste;
     // Executando os testes nos Dominios.
@@ -108,6 +112,7 @@ int main() {
                                     "Nome", "Senha", "Setor"};
 
     bateriaTestes(dominiosTeste);
+
     // Executando os testes nas Entidades.
 
     resultadoTeste = testePagamento.testeEntidade();
@@ -117,6 +122,11 @@ int main() {
     resultadoTeste = testeTitulo.testeEntidade();
     if (resultadoTeste)
         cout << "Sucesso nos testes de Titulo." << endl;
+
+    resultadoTeste = testeConta.testeEntidade();
+    if (resultadoTeste)
+        cout << "Sucesso nos testes de Conta." << endl;
+
     // Exemplo.
 
     setor.setValor("Papel e celulose");

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Projeto TP1<span id="projectnumber">&#160;6.0</span>
+   <div id="projectname">Projeto TP1<span id="projectnumber">&#160;7.0</span>
    </div>
    <div id="projectbrief">Projeto para Disciplina de Técnicas de Programação 1</div>
   </td>
@@ -162,10 +162,34 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>};</div>
 </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif </span><span class="comment">// ENTIDADES_H</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="foldopen" id="foldopen00071" data-start="{" data-end="};">
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_conta.html">   71</a></span><span class="keyword">class </span><a class="code hl_class" href="class_conta.html">Conta</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_entidade.html">Entidade</a> {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_class" href="class_cpf.html">Cpf</a> cpf;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_class" href="class_nome.html">Nome</a> nome;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_class" href="class_senha.html">Senha</a> senha;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">string</span> Id;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_conta.html#afad13d57c4559731778d1cbcd6972b9f">setId</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_conta.html#a8e1ee6204ea27f0b5d609df59a3cfba9">   79</a></span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_conta.html#a8e1ee6204ea27f0b5d609df59a3cfba9">getId</a>()<span class="keyword"> override </span>{<span class="keywordflow">return</span> Id;};</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">void</span> setCpf(<span class="keyword">const</span> <a class="code hl_class" href="class_cpf.html">Cpf</a>&amp;);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_class" href="class_cpf.html">Cpf</a> getCpf()<span class="keyword"> const </span>{<span class="keywordflow">return</span> cpf;};</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> setNome(<span class="keyword">const</span> <a class="code hl_class" href="class_nome.html">Nome</a>&amp;);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_class" href="class_nome.html">Nome</a> getNome()<span class="keyword"> const </span>{<span class="keywordflow">return</span> nome;};</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">void</span> setSenha(<span class="keyword">const</span> <a class="code hl_class" href="class_senha.html">Senha</a>&amp;);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_class" href="class_senha.html">Senha</a> getSenha()<span class="keyword"> const </span>{<span class="keywordflow">return</span> senha;};</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>};</div>
+</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#endif </span><span class="comment">// ENTIDADES_H</span></div>
 <div class="ttc" id="a_dominios_8h_html"><div class="ttname"><a href="_dominios_8h.html">Dominios.h</a></div><div class="ttdoc">Arquivo contendo os Dominios requeridos.</div></div>
 <div class="ttc" id="aclass_codigo_de_pagamento_html"><div class="ttname"><a href="class_codigo_de_pagamento.html">CodigoDePagamento</a></div><div class="ttdoc">Dominio requerido pelas especificacoes.</div><div class="ttdef"><b>Definition</b> Dominios.h:63</div></div>
 <div class="ttc" id="aclass_codigo_de_titulo_html"><div class="ttname"><a href="class_codigo_de_titulo.html">CodigoDeTitulo</a></div><div class="ttdoc">Dominio requerido pelas especificacoes.</div><div class="ttdef"><b>Definition</b> Dominios.h:75</div></div>
+<div class="ttc" id="aclass_conta_html"><div class="ttname"><a href="class_conta.html">Conta</a></div><div class="ttdoc">Entidade requerida, instanciando os Dominios definidos.</div><div class="ttdef"><b>Definition</b> Entidades.h:71</div></div>
+<div class="ttc" id="aclass_conta_html_a8e1ee6204ea27f0b5d609df59a3cfba9"><div class="ttname"><a href="class_conta.html#a8e1ee6204ea27f0b5d609df59a3cfba9">Conta::getId</a></div><div class="ttdeci">string getId() override</div><div class="ttdoc">Metodo para obtencao do identificador da Entidade.</div><div class="ttdef"><b>Definition</b> Entidades.h:79</div></div>
+<div class="ttc" id="aclass_conta_html_afad13d57c4559731778d1cbcd6972b9f"><div class="ttname"><a href="class_conta.html#afad13d57c4559731778d1cbcd6972b9f">Conta::setId</a></div><div class="ttdeci">void setId() override</div><div class="ttdoc">Metodo para atribuicao de identificador da Entidade.</div><div class="ttdef"><b>Definition</b> Entidades.cpp:58</div></div>
+<div class="ttc" id="aclass_cpf_html"><div class="ttname"><a href="class_cpf.html">Cpf</a></div><div class="ttdoc">Dominio requerido pelas especificacoes.</div><div class="ttdef"><b>Definition</b> Dominios.h:88</div></div>
 <div class="ttc" id="aclass_data_html"><div class="ttname"><a href="class_data.html">Data</a></div><div class="ttdoc">Dominio requerido pelas especificacoes.</div><div class="ttdef"><b>Definition</b> Dominios.h:100</div></div>
 <div class="ttc" id="aclass_dinheiro_html"><div class="ttname"><a href="class_dinheiro.html">Dinheiro</a></div><div class="ttdoc">Dominio requerido pelas especificacoes.</div><div class="ttdef"><b>Definition</b> Dominios.h:34</div></div>
 <div class="ttc" id="aclass_entidade_html"><div class="ttname"><a href="class_entidade.html">Entidade</a></div><div class="ttdoc">Declaracao de classe abstrata para interface e padronizacao da criacao de Entidades.</div><div class="ttdef"><b>Definition</b> Entidades.h:11</div></div>
@@ -177,6 +201,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclass_pagamento_html_a1aa1e315195c58da565dea591bb80953"><div class="ttname"><a href="class_pagamento.html#a1aa1e315195c58da565dea591bb80953">Pagamento::setId</a></div><div class="ttdeci">void setId() override</div><div class="ttdoc">Metodo para atribuicao de identificador da Entidade.</div><div class="ttdef"><b>Definition</b> Entidades.cpp:5</div></div>
 <div class="ttc" id="aclass_pagamento_html_ab27bfcd05d33d6cfa716b4e4625df0f8"><div class="ttname"><a href="class_pagamento.html#ab27bfcd05d33d6cfa716b4e4625df0f8">Pagamento::getId</a></div><div class="ttdeci">string getId() override</div><div class="ttdoc">Metodo para obtencao do identificador da Entidade.</div><div class="ttdef"><b>Definition</b> Entidades.h:30</div></div>
 <div class="ttc" id="aclass_percentual_html"><div class="ttname"><a href="class_percentual.html">Percentual</a></div><div class="ttdoc">Dominio requerido pelas especificacoes.</div><div class="ttdef"><b>Definition</b> Dominios.h:50</div></div>
+<div class="ttc" id="aclass_senha_html"><div class="ttname"><a href="class_senha.html">Senha</a></div><div class="ttdoc">Dominio requerido pelas especificacoes.</div><div class="ttdef"><b>Definition</b> Dominios.h:145</div></div>
 <div class="ttc" id="aclass_setor_html"><div class="ttname"><a href="class_setor.html">Setor</a></div><div class="ttdoc">Dominio requerido pelas especificacoes.</div><div class="ttdef"><b>Definition</b> Dominios.h:157</div></div>
 <div class="ttc" id="aclass_titulo_html"><div class="ttname"><a href="class_titulo.html">Titulo</a></div><div class="ttdoc">Entidade requerida, instanciando os Dominios definidos.</div><div class="ttdef"><b>Definition</b> Entidades.h:43</div></div>
 <div class="ttc" id="aclass_titulo_html_a6f40cec3893788413f6ca49a0359f02b"><div class="ttname"><a href="class_titulo.html#a6f40cec3893788413f6ca49a0359f02b">Titulo::setId</a></div><div class="ttdeci">void setId() override</div><div class="ttdoc">Metodo para atribuicao de identificador da Entidade.</div><div class="ttdef"><b>Definition</b> Entidades.cpp:27</div></div>

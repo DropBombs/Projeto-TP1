@@ -221,4 +221,19 @@ public:
     bool testeEntidade() override;
 };
 
+/// @brief Classe para Teste da Entidade Conta.
+/// @param instancia Ponteiro de tipo Conta para Teste.
+
+class TEConta : public TesteEntidade {
+private:
+    Conta* instancia;
+    string const VALOR_TESTE_CPF = "390.229.170-29";
+    string const VALOR_TESTE_NOME = "Tiago Nunes";
+    string const VALOR_TESTE_SENHA = "132756";
+public:
+    TEConta(Conta* instancia) : instancia(instancia) {};
+    ~TEConta() {delete instancia;};
+    bool testeEntidade() override;
+};
+
 #endif // TESTE_H

@@ -66,6 +66,24 @@
 \DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{class_dinheiro}{Dinheiro}}\ getDinheiro()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ valor;\};}
 \DoxyCodeLine{00067\ \};}
 \DoxyCodeLine{00068\ }
-\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ENTIDADES\_H}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_conta}{Conta}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_entidade}{Entidade}}\ \{}
+\DoxyCodeLine{00072\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{class_cpf}{Cpf}}\ cpf;}
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{class_nome}{Nome}}\ nome;}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{class_senha}{Senha}}\ senha;}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{string}\ Id;}
+\DoxyCodeLine{00077\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_conta_afad13d57c4559731778d1cbcd6972b9f}{setId}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_conta_a8e1ee6204ea27f0b5d609df59a3cfba9}{getId}}()\textcolor{keyword}{\ override\ }\{\textcolor{keywordflow}{return}\ Id;\};}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ setCpf(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_cpf}{Cpf}}\&);}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{class_cpf}{Cpf}}\ getCpf()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ cpf;\};}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ setNome(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_nome}{Nome}}\&);}
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{class_nome}{Nome}}\ getNome()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ nome;\};}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ setSenha(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_senha}{Senha}}\&);}
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{class_senha}{Senha}}\ getSenha()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ senha;\};}
+\DoxyCodeLine{00086\ \};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ENTIDADES\_H}}
 
 \end{DoxyCode}
