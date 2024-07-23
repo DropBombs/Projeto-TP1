@@ -60,7 +60,7 @@ public:
 
 /// Dominio requerido pelas especificacoes.
 
-class CodigoDePagamento : public Dominio { //200060422
+class CodigoDePagamento : public Dominio { // 200060422
 private:
         string codigoDePagamentoValue;
         static constexpr unsigned short TAMANHO = 8;
@@ -72,7 +72,7 @@ public:
 
 /// Dominio requerido pelas especificacoes.
 
-class CodigoDeTitulo : public Dominio { //200060422
+class CodigoDeTitulo : public Dominio { // 200060422
 private:
         string codigoDeTituloValue;
         static constexpr unsigned short TAMANHO = 11;
@@ -85,7 +85,7 @@ public:
 
 /// Dominio requerido pelas especificacoes.
 
-class Cpf : public Dominio { //200060422
+class Cpf : public Dominio { // 200060422
 private:
         string cpfValue;
         static constexpr unsigned short TAMANHO = 14;
@@ -97,7 +97,7 @@ public:
 
 /// Dominio requerido pelas especificacoes.
 
-class Data : public Dominio { //200060422
+class Data : public Dominio { // 200060422
 private:
         string dataValue;
         static const map<string, int>& getLimites() {
@@ -131,7 +131,7 @@ public:
 
 /// Dominio requerido pelas especificacoes.
 
-class Nome : public Dominio { //200060422
+class Nome : public Dominio { // 200060422
 private:
     string nomeValue;
 public:
@@ -142,7 +142,7 @@ public:
 
 /// Dominio requerido pelas especificacoes.
 
-class Senha : public Dominio { //200060422
+class Senha : public Dominio { // 200060422
 private:
     string senhaValue;
     static constexpr unsigned short TAMANHO = 6;
@@ -154,7 +154,7 @@ public:
 
 /// Dominio requerido pelas especificacoes.
 
-class Setor : public Dominio { //200060422
+class Setor : public Dominio { // 200060422
 private:
     string setorValue;
     static const char* setores[];

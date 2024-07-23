@@ -2,8 +2,9 @@
 #define TESTE_H
 #include <string>
 #include <functional>
-#include "Dominios.h"
 #include "Entidades.h"
+
+class UnidadeTeste;
 
 using namespace std;
 
@@ -134,7 +135,7 @@ public:
 /// @brief Classe para Testes do Dominio Nome.
 /// @param instancia Ponteiro de tipo Nome para Teste.
 
-class UTNome : public UnidadeTeste { //200060422
+class UTNome : public UnidadeTeste { // 200060422
 private:
     Dominio* instancia;
     string const VALOR_VALIDO = "Tiago Nunes";
@@ -149,7 +150,7 @@ public:
 /// @brief Classe para Testes do Dominio Senha.
 /// @param instancia Ponteiro de tipo Senha para Teste.
 
-class UTSenha : public UnidadeTeste { //200060422
+class UTSenha : public UnidadeTeste { // 200060422
 private:
     Dominio* instancia;
     string const VALOR_VALIDO = "184302";
@@ -164,7 +165,7 @@ public:
 /// @brief Classe para Testes do Dominio Setor.
 /// @param instancia Ponteiro de tipo Setor para Teste.
 
-class UTSetor : public UnidadeTeste { //200060422
+class UTSetor : public UnidadeTeste { // 200060422
 private:
     Dominio* instancia;
     string const VALOR_VALIDO = "Agricultura";
@@ -224,7 +225,7 @@ public:
 /// @brief Classe para Teste da Entidade Conta.
 /// @param instancia Ponteiro de tipo Conta para Teste.
 
-class TEConta : public TesteEntidade { //200060422
+class TEConta : public TesteEntidade { // 200060422
 private:
     Conta* instancia;
     string const VALOR_TESTE_CPF = "390.229.170-29";
@@ -234,6 +235,15 @@ public:
     TEConta(Conta* instancia) : instancia(instancia) {};
     ~TEConta() {delete instancia;};
     bool testeEntidade() override;
+};
+
+//---------------------------------------------------------------------------------------------------
+
+class InicializadorTestes {
+public:
+    static bool autoTeste(Dominio*, UnidadeTeste*);
+    static void bateriaTestesDominio(const vector<string>&);
+    static void bateriaTestesEntidades(TesteEntidade&, TesteEntidade&, TesteEntidade&);
 };
 
 #endif // TESTE_H

@@ -1,5 +1,5 @@
 #include "Teste.h"
-#include "Dominios.h"
+#include "Fabricas.h"
 using namespace std;
 
 /// Metodo para execucao dos Testes de valor valido e invalido e retorno do estado em forma de inteiro.
@@ -247,7 +247,9 @@ bool TEPagamento::testeEntidade() {
     CodigoDePagamento codigoTeste;
     codigoTeste.setValor(VALOR_TESTE_CDP);
     instancia->setCodigoPagamento(codigoTeste);
-    if (instancia->getCodigoPagamento().getValor() != VALOR_TESTE_CDP) {
+    instancia->setId();
+    if (instancia->getCodigoPagamento().getValor() != VALOR_TESTE_CDP
+        || instancia->getId() != VALOR_TESTE_CDP) {
         cout << "Erro ao inicializar Código de Pagamento";
         return false;
     };
@@ -285,7 +287,9 @@ bool TETitulo::testeEntidade() {
     CodigoDeTitulo codigoTeste;
     codigoTeste.setValor(VALOR_TESTE_CDT);
     instancia->setCodigoTitulo(codigoTeste);
-    if (instancia->getCodigoTitulo().getValor() != VALOR_TESTE_CDT) {
+    instancia->setId();
+    if (instancia->getCodigoTitulo().getValor() != VALOR_TESTE_CDT
+        || instancia->getId() != VALOR_TESTE_CDT) {
         cout << "Erro ao inicializar Código de Titulo.";
         return false;
     };
@@ -339,7 +343,9 @@ bool TEConta::testeEntidade() {
     Cpf cpfTeste;
     cpfTeste.setValor(VALOR_TESTE_CPF);
     instancia->setCpf(cpfTeste);
-    if (instancia->getCpf().getValor() != VALOR_TESTE_CPF) {
+    instancia->setId();
+    if (instancia->getCpf().getValor() != VALOR_TESTE_CPF
+        || instancia->getId() != VALOR_TESTE_CPF) {
         cout << "Erro ao inicializar Cpf.";
         return false;
     };
@@ -359,4 +365,53 @@ bool TEConta::testeEntidade() {
         cout << "Erro ao inicializar Senha.";
         return false;
     };
+
+    return true;
+};
+
+
+bool InicializadorTestes::autoTeste(Dominio* testeDominio, UnidadeTeste* testeUnidade) {
+    if (!testeDominio || !testeUnidade)
+        return false;
+
+    switch (testeUnidade->executar()) {
+        case testeUnidade->FALHA:
+            return false;
+        case testeUnidade->SUCESSO:
+            return true;
+        default:
+            return false;
+    }
+};
+
+void InicializadorTestes::bateriaTestesDominio(const vector<string>& tipoDominio) {
+    for (const auto& tipo : tipoDominio) {
+        Dominio* dominio = Fabricas::criarDominios(tipo);
+        UnidadeTeste* testeUnidade = Fabricas::criarUnidadeTeste(dominio);
+        bool retorno = autoTeste(dominio, testeUnidade);
+        if (retorno) {
+            cout << "Sucesso nos testes de " << tipo << "." << endl;
+        } else {
+            cout << "Falha nos testes iniciais de " << tipo << ". Encerrando..." << endl;
+            exit(-1);
+        }
+        delete dominio;
+    }
+};
+
+void InicializadorTestes::bateriaTestesEntidades(TesteEntidade& testePagamento, TesteEntidade& testeTitulo, TesteEntidade& testeConta) {
+    bool resultadoTeste;
+
+    resultadoTeste = testePagamento.testeEntidade();
+    if (resultadoTeste)
+        cout << "Sucesso nos testes de Pagamento." << endl;
+
+    resultadoTeste = testeTitulo.testeEntidade();
+    if (resultadoTeste)
+        cout << "Sucesso nos testes de Titulo." << endl;
+
+    resultadoTeste = testeConta.testeEntidade();
+    if (resultadoTeste)
+        cout << "Sucesso nos testes de Conta." << endl;
+
 };
