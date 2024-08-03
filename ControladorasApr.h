@@ -8,4 +8,14 @@ public:
 
 };
 
+class CntrlAConta : public InterfaceAConta {
+public:
+    void criar() override;
+    int executar(Cpf) override;
+};
+
+class CntrlAInv : public InterfaceAInv {
+public:
+
+
 #endif // CONTROLADORASAPR_H_INCLUDED

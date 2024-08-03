@@ -1,0 +1,71 @@
+\doxysection{C\+:/\+Users/\+Usuario/\+Desktop/\+Duarte/\+Downloads/\+Antonio Paulo/\+Estudos/\+TP1/\+Projeto\+TP1/\+Projeto-\/\+TP1/\+Projeto-\/\+TP1/\+Interfaces.h}
+\hypertarget{_interfaces_8h_source}{}\label{_interfaces_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ INTERFACES\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ INTERFACES\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_entidades_8h}{Entidades.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ Declarações\ de\ interfaces\ da\ camada\ de\ apresentação.}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_interface_a_aut}{InterfaceAAut}}\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_interface_a_aut}{\string~InterfaceAAut}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ autenticar(\mbox{\hyperlink{class_cpf}{Cpf}}*)\ =\ 0;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \};}
+\DoxyCodeLine{00013\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00014\ \textcolor{comment}{class\ InterfaceAConta\ \{}}
+\DoxyCodeLine{00015\ \textcolor{comment}{public:}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ virtual\ \string~InterfaceAConta()\ =\ default;}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ \ \ \ virtual\ void\ criar()\ =\ 0;}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ virtual\ int\ executar(Cpf)\ =\ 0;}}
+\DoxyCodeLine{00019\ \textcolor{comment}{}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\};}}
+\DoxyCodeLine{00021\ \textcolor{comment}{}}
+\DoxyCodeLine{00022\ \textcolor{comment}{class\ InterfaceAInvestimentos\ \{}}
+\DoxyCodeLine{00023\ \textcolor{comment}{public:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ \ \ \ virtual\ \string~InterfaceAInvestimentos()\ =\ default;}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ virtual\ void\ executar(Cpf)\ =\ 0\ \ ;}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\};}}
+\DoxyCodeLine{00027\ \textcolor{comment}{}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ Declarações\ de\ interfaces\ da\ camada\ de\ serviço.}}
+\DoxyCodeLine{00029\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_interface_s_aut}{InterfaceSAut}}\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_interface_s_aut}{\string~InterfaceSAut}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ autenticar(\mbox{\hyperlink{class_cpf}{Cpf}},\ \mbox{\hyperlink{class_senha}{Senha}})\ =\ 0;}
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_interface_s_conta}{InterfaceSConta}}\ \{}
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_interface_s_conta}{\string~InterfaceSConta}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ criar(\mbox{\hyperlink{class_conta}{Conta}})\ =\ 0;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ recuperar(\mbox{\hyperlink{class_conta}{Conta}}*)\ =\ 0;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ atualizar(\mbox{\hyperlink{class_conta}{Conta}})\ =\ 0;}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ excluir(\mbox{\hyperlink{class_cpf}{Cpf}})\ =\ 0;}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00047\ \textcolor{comment}{class\ InterfaceSTitulo\ \{}}
+\DoxyCodeLine{00048\ \textcolor{comment}{public:}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ \ \ \ virtual\ \string~InterfaceSTitulo()\ =\ default;}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ \ \ \ virtual\ bool\ criar(Titulo)\ =\ 0;}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ \ \ \ virtual\ bool\ recuperar(Titulo*)\ =\ 0;}}
+\DoxyCodeLine{00052\ \textcolor{comment}{\ \ \ \ virtual\ bool\ atualizar(Titulo)\ =\ 0;}}
+\DoxyCodeLine{00053\ \textcolor{comment}{\ \ \ \ virtual\ bool\ excluir(CodigoDeTitulo)\ =\ 0;}}
+\DoxyCodeLine{00054\ \textcolor{comment}{\};}}
+\DoxyCodeLine{00055\ \textcolor{comment}{}}
+\DoxyCodeLine{00056\ \textcolor{comment}{class\ InterfaceSPagamento\ \{}}
+\DoxyCodeLine{00057\ \textcolor{comment}{public:}}
+\DoxyCodeLine{00058\ \textcolor{comment}{\ \ \ \ virtual\ \string~InterfaceSPagamento()\ =\ default;}}
+\DoxyCodeLine{00059\ \textcolor{comment}{\ \ \ \ virtual\ bool\ criar(Pagamento)\ =\ 0;}}
+\DoxyCodeLine{00060\ \textcolor{comment}{\ \ \ \ virtual\ bool\ recuperar(Pagamento*)\ =\ 0;}}
+\DoxyCodeLine{00061\ \textcolor{comment}{\ \ \ \ virtual\ bool\ atualizar(Pagamento)\ =\ 0;}}
+\DoxyCodeLine{00062\ \textcolor{comment}{\ \ \ \ virtual\ bool\ excluir(CodigoDePagamento)\ =\ 0;}}
+\DoxyCodeLine{00063\ \textcolor{comment}{\};}}
+\DoxyCodeLine{00064\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ INTERFACES\_H}}
+
+\end{DoxyCode}

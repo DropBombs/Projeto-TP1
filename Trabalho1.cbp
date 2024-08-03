@@ -32,8 +32,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="../../../exemploscodigos/Exemplo-04-Padrao-Command-em-interface-com-usuario/Fabricas.h" />
-		<Unit filename="ControladorasApr.h" />
+		<Unit filename="Camada de Apresentação/ControladorasApr.cpp" />
+		<Unit filename="Camada de Apresentação/ControladorasApr.h" />
+		<Unit filename="Camada de Serviço/ControladorasServico.cpp" />
+		<Unit filename="Camada de Serviço/ControladorasServico.h" />
+		<Unit filename="Camada de Serviço/Stubs.h" />
 		<Unit filename="Dominios.cpp" />
 		<Unit filename="Dominios.h" />
 		<Unit filename="Entidades.cpp" />

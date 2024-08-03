@@ -38,17 +38,19 @@
 	<sstream>
 	<vector>
 
-1718844084 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\teste.cpp
+1721699371 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\teste.cpp
 	"Teste.h"
-	"Dominios.h"
+	"Fabricas.h"
 
 1721699371 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\teste.h
 	<string>
 	<functional>
 	"Entidades.h"
 
-1721689064 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\main.cpp
+1722640129 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\main.cpp
 	"FachadaTeste.h"
+	"Camada de Apresentação/ControladorasApr.h"
+	"Interfaces.h"
 
 1718843137 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\entidades.h
 	"Dominios.h"
@@ -96,4 +98,28 @@
 	<string>
 	<iostream>
 	"Teste.h"
+
+1721698022 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\fabricas.h
+	<string>
+	<functional>
+	"Teste.h"
+
+1722526718 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\camada de serviço\controladorasservico.cpp
+	"ControladorasServico.h"
+
+1722639190 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\camada de serviço\controladorasservico.h
+	"../Interfaces.h"
+
+1722715069 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\interfaces.h
+	"Entidades.h"
+
+1722640129 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\camada de apresentação\controladorasapr.cpp
+	"ControladorasApr.h"
+
+1722715080 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\camada de apresentação\controladorasapr.h
+	"../Interfaces.h"
+	"../Camada de Serviço/Stubs.h"
+
+1722639099 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\camada de serviço\stubs.h
+	"../Interfaces.h"
 

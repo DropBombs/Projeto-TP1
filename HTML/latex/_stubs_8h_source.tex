@@ -1,0 +1,27 @@
+\doxysection{Stubs.\+h}
+\hypertarget{_stubs_8h_source}{}\label{_stubs_8h_source}\index{C:/Users/Usuario/Desktop/Duarte/Downloads/Antonio Paulo/Estudos/TP1/ProjetoTP1/Projeto-\/TP1/Projeto-\/TP1/Camada de Serviço/Stubs.h@{C:/Users/Usuario/Desktop/Duarte/Downloads/Antonio Paulo/Estudos/TP1/ProjetoTP1/Projeto-\/TP1/Projeto-\/TP1/Camada de Serviço/Stubs.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ STUBS\_H\_INCLUDED}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ STUBS\_H\_INCLUDED}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}../Interfaces.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_stub_s_aut}{StubSAut}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_interface_s_aut}{InterfaceSAut}}\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ cpfAux\ =\ \textcolor{stringliteral}{"{}529.982.247-\/25"{}};}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ senhaAux\ =\ \textcolor{stringliteral}{"{}184302"{}};}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{class_cpf}{Cpf}}\ cpfStub;}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_senha}{Senha}}\ senhaStub;}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{bool}\ autenticar(\mbox{\hyperlink{class_cpf}{Cpf}},\ \mbox{\hyperlink{class_senha}{Senha}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00013\ \};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ StubSAut::autenticar(\mbox{\hyperlink{class_cpf}{Cpf}}\ cpf,\ \mbox{\hyperlink{class_senha}{Senha}}\ senha)\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ cpfStub.\mbox{\hyperlink{class_cpf_aa2e257f955dd0975462ff908ffcc2869}{setValor}}(cpfAux);}
+\DoxyCodeLine{00017\ \ \ \ \ senhaStub.\mbox{\hyperlink{class_senha_afeeaa0f2602a12ba58b03fac9eff2de2}{setValor}}(senhaAux);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordflow}{return}\ (cpf.\mbox{\hyperlink{class_cpf_ad2f820ec95bd74e724a06e9be32b7060}{getValor}}()\ ==\ cpfStub.\mbox{\hyperlink{class_cpf_ad2f820ec95bd74e724a06e9be32b7060}{getValor}}()\ \&\&\ senha.\mbox{\hyperlink{class_senha_a900891c1b52580556ad2718c1cbabf71}{getValor}}()\ ==\ senhaStub.\mbox{\hyperlink{class_senha_a900891c1b52580556ad2718c1cbabf71}{getValor}}());}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ STUBS\_H\_INCLUDED}}
+
+\end{DoxyCode}

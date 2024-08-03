@@ -1,7 +1,7 @@
 var indexSectionsWithContent =
 {
-  0: "cdefgnpstuv",
-  1: "cdenpstu",
+  0: "cdefginpstuv",
+  1: "cdefinpstu",
   2: "det",
   3: "egstv",
   4: "efs",
@@ -20,11 +20,11 @@ var indexSectionNames =
 
 var indexSectionLabels =
 {
-  0: "Todos",
+  0: "All",
   1: "Classes",
-  2: "Arquivos",
-  3: "Funções",
-  4: "Variáveis",
-  5: "Páginas"
+  2: "Files",
+  3: "Functions",
+  4: "Variables",
+  5: "Pages"
 };
 
