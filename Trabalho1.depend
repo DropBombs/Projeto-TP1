@@ -27,7 +27,7 @@
 1717540519 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\dominios.cpp
 	"Dominios.h"
 
-1718843137 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\dominios.h
+1722819675 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\dominios.h
 	<iostream>
 	<stdexcept>
 	<regex>
@@ -47,7 +47,7 @@
 	<functional>
 	"Entidades.h"
 
-1722640129 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\main.cpp
+1722820093 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\main.cpp
 	"FachadaTeste.h"
 	"Camada de Apresentação/ControladorasApr.h"
 	"Interfaces.h"
@@ -110,16 +110,36 @@
 1722639190 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\camada de serviço\controladorasservico.h
 	"../Interfaces.h"
 
-1722715069 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\interfaces.h
+1722817773 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\interfaces.h
 	"Entidades.h"
 
-1722640129 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\camada de apresentação\controladorasapr.cpp
+1722818126 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\camada de apresentação\controladorasapr.cpp
 	"ControladorasApr.h"
 
-1722715080 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\camada de apresentação\controladorasapr.h
+1722817931 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\camada de apresentação\controladorasapr.h
 	"../Interfaces.h"
 	"../Camada de Serviço/Stubs.h"
+	"../Comandos.h"
 
-1722639099 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\camada de serviço\stubs.h
+1722819716 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\camada de serviço\stubs.h
 	"../Interfaces.h"
+
+1722820209 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\comandos.h
+	"Camada de Apresentação/ControladorasApr.h"
+
+1722820073 source:c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\camada de serviço\banco de dados\conexaobd.cpp
+	"ConexaoBD.h"
+
+1722819675 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\camada de serviço\banco de dados\conexaobd.h
+	"../../Dominios.h"
+	"../../Entidades.h"
+	<list>
+	<iostream>
+	<conio.h>
+	<string>
+	<stdio.h>
+	"sqlite3.h"
+
+1722812178 c:\users\usuario\desktop\duarte\downloads\antonio paulo\estudos\tp1\projetotp1\projeto-tp1\projeto-tp1\camada de serviço\banco de dados\sqlite3.h
+	<stdarg.h>
 

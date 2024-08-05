@@ -34,9 +34,15 @@
 		</Compiler>
 		<Unit filename="Camada de Apresentação/ControladorasApr.cpp" />
 		<Unit filename="Camada de Apresentação/ControladorasApr.h" />
+		<Unit filename="Camada de Serviço/Banco de Dados/ConexaoBD.cpp" />
+		<Unit filename="Camada de Serviço/Banco de Dados/ConexaoBD.h" />
+		<Unit filename="Camada de Serviço/Banco de Dados/sqlite3.h" />
+		<Unit filename="Camada de Serviço/Banco de Dados/sqlite3.o" />
+		<Unit filename="Camada de Serviço/Banco de Dados/trabalho2db.db" />
 		<Unit filename="Camada de Serviço/ControladorasServico.cpp" />
 		<Unit filename="Camada de Serviço/ControladorasServico.h" />
 		<Unit filename="Camada de Serviço/Stubs.h" />
+		<Unit filename="Comandos.h" />
 		<Unit filename="Dominios.cpp" />
 		<Unit filename="Dominios.h" />
 		<Unit filename="Entidades.cpp" />

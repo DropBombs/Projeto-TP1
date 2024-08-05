@@ -7,15 +7,15 @@
 class InterfaceAAut {
 public:
     virtual ~InterfaceAAut() = default;
-    virtual bool autenticar(Cpf*) = 0;
+    virtual bool autenticar() = 0;
 
 };
-/*
+
 class InterfaceAConta {
 public:
     virtual ~InterfaceAConta() = default;
     virtual void criar() = 0;
-    virtual int executar(Cpf) = 0;
+    virtual void executar() = 0;
 
 };
 
@@ -26,7 +26,8 @@ public:
 };
 
 // Declarações de interfaces da camada de serviço.
-*/
+
+//---------------------------------------------------------------------------------------------------
 
 class InterfaceSAut {
 public:
