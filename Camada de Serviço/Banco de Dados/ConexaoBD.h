@@ -10,19 +10,22 @@
 
 using namespace std;
 
-// Declaração da classe EErroPersistencia.
+/// @file ConexaoBD.h Arquivo contendo aplicacao de persistencia com SQLite.
 
-class EErroPersistencia {
+// Declaração da classe EErroPersistencia.
+/// Declaracao de classe para controle de Erro de persistencia.
+class EErroPersistencia { // 200060422
 private:
         string mensagem;
 public:
         EErroPersistencia(string);
         string what() const;
 };
-//---------------------------------------------------------------------------
-// Declaração da classe ElementoResultado.
 
-class ElementoResultado {
+//---------------------------------------------------------------------------
+
+/// Declaracao de classe com comportamento relacional para BD.
+class ElementoResultado { // 200060422
 private:
         string nomeColuna;
         string valorColuna;
@@ -32,10 +35,11 @@ public:
         void setValorColuna(const string&);
         string getValorColuna() const;
 };
-//---------------------------------------------------------------------------
-// Declaração da classe ComandoSQL.
 
-class ComandoSQL {
+//---------------------------------------------------------------------------
+
+/// Declaracao de classe para execucao de comandos SQL.
+class ComandoSQL { // 200060422
 private:
         const char *nomeBancoDados;
         sqlite3 *bd;
@@ -54,17 +58,41 @@ public:
         }
         void executar();
 };
-//---------------------------------------------------------------------------
-// Declaração da classe ComandoLerSenha.
 
-class ComandoLerSenha : public ComandoSQL {
+//---------------------------------------------------------------------------
+
+/// Declaracao de classe Comando para autenticar Cpf e Senha no BD.
+class ComandoLerSenha : public ComandoSQL { // 200060422
 public:
         ComandoLerSenha(Cpf);
         string getResultado();
 };
 
+/// Declaracao de classe Comando para criar Conta no BD.
+class ComandoCriarConta : public ComandoSQL { // 200060422
+public:
+    ComandoCriarConta(Conta);
+};
+
+/// Declaracao de classe Comando para atualizar dados da Conta no BD.
+class ComandoAtualizarConta : public ComandoSQL { // 200060422
+public:
+    ComandoAtualizarConta(Conta);
+};
+
+/// Declaracao de classe Comando para excluir Conta no BD.
+class ComandoExcluirConta : public ComandoSQL { // 200060422
+public:
+    ComandoExcluirConta(Conta);
+};
+
+/// Declaracao de classe Comando para listar dados da Conta no BD.
+class ComandoListarConta : public ComandoSQL { // 200060422
+public:
+    ComandoListarConta(Conta);
+};
+
 //---------------------------------------------------------------------------
-// Implementações de métodos.
 
 inline string ElementoResultado::getNomeColuna() const {
         return nomeColuna;

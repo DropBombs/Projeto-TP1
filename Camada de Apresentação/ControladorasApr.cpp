@@ -15,19 +15,19 @@ CntrlAprInicial::CntrlAprInicial() {
         cin >> inputUsuario;
         switch (inputUsuario) {
             case SAIR:
+                cout << "Terminando execucao.";
                 exit(0);
             case AUTENTICAR:
                 IAAut->autenticar();
                 break;
             case CRIAR:
                 IAConta->criar();
-                break;
+                continue;
             default:
                 cout << "Opção inválida!" << endl;
         };
 
-    // Próxima tela pós usuário autenticado.
-        telaUsuario();
+    telaUsuario();
 
     };
 };
@@ -46,25 +46,23 @@ void CntrlAprInicial::telaUsuario() {
     cin >> inputUsuario;
     switch (inputUsuario) {
         case SAIR:
+            cout << "Retornando..." << endl;
             exit(0);
         case CONTA:
             IAConta->executar();
             break;
         case INVESTIMENTO:
-            exit(0);
-            // IAInv->executar();
+            cout << "Servico em desenvolvimento...";
+            break;
         default:
-            cout << "Opção inválida!" << endl;
+            cout << "Opcao invalida!" << endl;
     };
 };
 
 bool CntrlAAut::autenticar() {
-    string cpfValue, senhaValue;
-    Cpf cpf;
-    Senha senha;
+    bool resultadoAut = false;
 
     cout << "--- Autenticacao ---" << endl;
-    resultadoAut = false;
 
     while (!resultadoAut) {
         cout << "Digite o seu CPF: ";
@@ -89,7 +87,7 @@ bool CntrlAAut::autenticar() {
 
         if (senhaRecuperada == senhaValue) {
             resultadoAut = true;
-            cout << "Autenticacao bem-sucedida!" << std::endl;
+            cout << "Autenticacao bem-sucedida!" << endl;
             return resultadoAut;
         } else {
             cout << endl << "Senha digitada diferente da cadastrada." << endl;
@@ -117,7 +115,7 @@ void CntrlAConta::executar() {
     bool sair = false;
     while (!sair) {
         cout << "--- Conta ---" << endl;
-        cout << "Para recuperar e ler dados de uma conta, escolha a opcao " << RECUPERAR << endl;
+        cout << "Para listar e ler dados de uma conta, escolha a opcao " << LISTAR << endl;
         cout << "Para atualizar dados de uma conta, escolha a opcao " << ATUALIZAR << endl;
         cout << "Para excluir uma conta, escolha a opcao " << EXCLUIR << endl;
         cout << "Para voltar, escolha a opcao " << SAIR << endl;
@@ -126,14 +124,17 @@ void CntrlAConta::executar() {
         switch (inputUsuario) {
             case SAIR:
                 sair = true;
-            case RECUPERAR:
-                exit(0);
+            case LISTAR:
+                comando = new ComandoIAContaListar();
+                comando->executar();
             case ATUALIZAR:
-                exit(0);
+                comando = new ComandoIAContaAtualizar();
+                comando->executar();
             case EXCLUIR:
-                exit(0);
+                comando = new ComandoIAContaExcluir();
+                comando->executar();
             default:
-                cout << ERRO;
+                cout << "Opcao invalida!" << endl;
         };
     };
 };

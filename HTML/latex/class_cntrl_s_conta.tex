@@ -1,5 +1,14 @@
 \doxysection{Cntrl\+SConta Class Reference}
 \hypertarget{class_cntrl_s_conta}{}\label{class_cntrl_s_conta}\index{CntrlSConta@{CntrlSConta}}
+
+
+Declaracao de classe Controladora que realize interface de Contas na Camada de Servico.  
+
+
+
+
+{\ttfamily \#include $<$Controladoras\+Servico.\+h$>$}
+
 Inheritance diagram for Cntrl\+SConta\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,15 +25,21 @@ bool \mbox{\hyperlink{class_cntrl_s_conta_a8f7fedefd6c24fcd9fe899d72e972c14}{rec
 bool \mbox{\hyperlink{class_cntrl_s_conta_a5ce339da944596a99b1d4d2b1d280a45}{atualizar}} (\mbox{\hyperlink{class_conta}{Conta}}) override
 \item 
 bool \mbox{\hyperlink{class_cntrl_s_conta_a76d90fff7c8b220ab0a9e444ab15e716}{excluir}} (\mbox{\hyperlink{class_cpf}{Cpf}}) override
+\item 
+\Hypertarget{class_cntrl_s_conta_adc031ebf71ae270fe166d0cf32704b35}\label{class_cntrl_s_conta_adc031ebf71ae270fe166d0cf32704b35} 
+vector$<$ \mbox{\hyperlink{class_conta}{Conta}} $>$ {\bfseries listar\+Todas\+Contas} ()
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Declaracao de classe Controladora que realize interface de Contas na Camada de Servico. 
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_cntrl_s_conta_a5ce339da944596a99b1d4d2b1d280a45}\index{CntrlSConta@{CntrlSConta}!atualizar@{atualizar}}
 \index{atualizar@{atualizar}!CntrlSConta@{CntrlSConta}}
 \doxysubsubsection{\texorpdfstring{atualizar()}{atualizar()}}
 {\footnotesize\ttfamily \label{class_cntrl_s_conta_a5ce339da944596a99b1d4d2b1d280a45} 
-bool Cntrl\+SConta\+::atualizar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_conta}{Conta}}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+bool Cntrl\+SConta\+::atualizar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_conta}{Conta}}}]{conta}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -34,7 +49,7 @@ Implements \mbox{\hyperlink{class_interface_s_conta}{Interface\+SConta}}.
 \index{criar@{criar}!CntrlSConta@{CntrlSConta}}
 \doxysubsubsection{\texorpdfstring{criar()}{criar()}}
 {\footnotesize\ttfamily \label{class_cntrl_s_conta_a4f8aa466719892f2d49cade0ef03e92d} 
-bool Cntrl\+SConta\+::criar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_conta}{Conta}}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+bool Cntrl\+SConta\+::criar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_conta}{Conta}}}]{conta}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -44,7 +59,7 @@ Implements \mbox{\hyperlink{class_interface_s_conta}{Interface\+SConta}}.
 \index{excluir@{excluir}!CntrlSConta@{CntrlSConta}}
 \doxysubsubsection{\texorpdfstring{excluir()}{excluir()}}
 {\footnotesize\ttfamily \label{class_cntrl_s_conta_a76d90fff7c8b220ab0a9e444ab15e716} 
-bool Cntrl\+SConta\+::excluir (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cpf}{Cpf}}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+bool Cntrl\+SConta\+::excluir (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cpf}{Cpf}}}]{cpf}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -54,7 +69,7 @@ Implements \mbox{\hyperlink{class_interface_s_conta}{Interface\+SConta}}.
 \index{recuperar@{recuperar}!CntrlSConta@{CntrlSConta}}
 \doxysubsubsection{\texorpdfstring{recuperar()}{recuperar()}}
 {\footnotesize\ttfamily \label{class_cntrl_s_conta_a8f7fedefd6c24fcd9fe899d72e972c14} 
-bool Cntrl\+SConta\+::recuperar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_conta}{Conta}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+bool Cntrl\+SConta\+::recuperar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_conta}{Conta}} \texorpdfstring{$\ast$}{*}}]{conta}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -62,6 +77,7 @@ Implements \mbox{\hyperlink{class_interface_s_conta}{Interface\+SConta}}.
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/\+Usuario/\+Desktop/\+Duarte/\+Downloads/\+Antonio Paulo/\+Estudos/\+TP1/\+Projeto\+TP1/\+Projeto-\/\+TP1/\+Projeto-\/\+TP1/Controladoras\+Servico.\+h\end{DoxyCompactItemize}
+Camada de Serviço/\mbox{\hyperlink{_controladoras_servico_8h}{Controladoras\+Servico.\+h}}\item 
+Camada de Serviço/Controladoras\+Servico.\+cpp\end{DoxyCompactItemize}

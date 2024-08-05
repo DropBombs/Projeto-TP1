@@ -91,13 +91,18 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">CntrlSConta Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Declaracao de classe Controladora que realize interface de Contas na Camada de Servico.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_controladoras_servico_8h_source.html">ControladorasServico.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for CntrlSConta:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_cntrl_s_conta.png" usemap="#CntrlSConta_map" alt=""/>
   <map id="CntrlSConta_map" name="CntrlSConta_map">
-<area href="class_interface_s_conta.html" alt="InterfaceSConta" shape="rect" coords="0,0,103,24"/>
+<area href="class_interface_s_conta.html" title="Interface de Servico para Contas." alt="InterfaceSConta" shape="rect" coords="0,0,103,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -111,8 +116,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5ce339da944596a99b1d4d2b1d280a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76d90fff7c8b220ab0a9e444ab15e716" id="r_a76d90fff7c8b220ab0a9e444ab15e716"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76d90fff7c8b220ab0a9e444ab15e716">excluir</a> (<a class="el" href="class_cpf.html">Cpf</a>) override</td></tr>
 <tr class="separator:a76d90fff7c8b220ab0a9e444ab15e716"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc031ebf71ae270fe166d0cf32704b35" id="r_adc031ebf71ae270fe166d0cf32704b35"><td class="memItemLeft" align="right" valign="top"><a id="adc031ebf71ae270fe166d0cf32704b35" name="adc031ebf71ae270fe166d0cf32704b35"></a>
+vector&lt; <a class="el" href="class_conta.html">Conta</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>listarTodasContas</b> ()</td></tr>
+<tr class="separator:adc031ebf71ae270fe166d0cf32704b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Declaracao de classe Controladora que realize interface de Contas na Camada de Servico. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5ce339da944596a99b1d4d2b1d280a45" name="a5ce339da944596a99b1d4d2b1d280a45"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5ce339da944596a99b1d4d2b1d280a45">&#9670;&#160;</a></span>atualizar()</h2>
 
@@ -125,7 +135,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">bool CntrlSConta::atualizar </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_conta.html">Conta</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_conta.html">Conta</a></td>          <td class="paramname"><span class="paramname"><em>conta</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -152,7 +162,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">bool CntrlSConta::criar </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_conta.html">Conta</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_conta.html">Conta</a></td>          <td class="paramname"><span class="paramname"><em>conta</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -179,7 +189,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">bool CntrlSConta::excluir </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_cpf.html">Cpf</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_cpf.html">Cpf</a></td>          <td class="paramname"><span class="paramname"><em>cpf</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -206,7 +216,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">bool CntrlSConta::recuperar </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_conta.html">Conta</a> *</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_conta.html">Conta</a> *</td>          <td class="paramname"><span class="paramname"><em>conta</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -221,8 +231,9 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Usuario/Desktop/Duarte/Downloads/Antonio Paulo/Estudos/TP1/ProjetoTP1/Projeto-TP1/Projeto-TP1/<a class="el" href="_controladoras_servico_8h_source.html">ControladorasServico.h</a></li>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>Camada de Serviço/<a class="el" href="_controladoras_servico_8h_source.html">ControladorasServico.h</a></li>
+<li>Camada de Serviço/<b>ControladorasServico.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

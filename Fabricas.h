@@ -6,6 +6,9 @@
 
 using namespace std;
 
+/// @file Fabricas.h Arquivo contendo classe para construcao de Dominios.
+
+/// Declaracao de classe para criacao de Dominios.
 class Fabricas {
 public:
     static Dominio* criarDominios(const string&); // Funcao que mapeia o nome do Dominio a um ponteiro para ele.

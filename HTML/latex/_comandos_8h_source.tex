@@ -1,0 +1,76 @@
+\doxysection{Comandos.\+h}
+\hypertarget{_comandos_8h_source}{}\label{_comandos_8h_source}\mbox{\hyperlink{_comandos_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ COMANDOS\_H\_INCLUDED}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ COMANDOS\_H\_INCLUDED}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Camada\ de\ Apresentação/ControladorasApr.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Camada\ de\ Serviço/ControladorasServico.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_comando_i_a_conta}{ComandoIAConta}}\ \{\ \textcolor{comment}{//\ 190084499}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_comando_i_a_conta}{\string~ComandoIAConta}}()\ =\ \textcolor{keywordflow}{default};\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_comando_i_a_conta_a2c270e169c71ec069a5bfecb2703eb18}{executar}}()\ =\ 0;}
+\DoxyCodeLine{00015\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_comando_i_a_conta_criar}{ComandoIAContaCriar}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_comando_i_a_conta}{ComandoIAConta}}\ \{\ \textcolor{comment}{//\ 190084499}}
+\DoxyCodeLine{00019\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_interface_s_conta}{InterfaceSConta}}*\ ISConta;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{string}\ cpfValue,\ nomeValue,\ senhaValue;}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_conta}{Conta}}\ conta;}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_cpf}{Cpf}}\ cpf;}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_nome}{Nome}}\ nome;}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_senha}{Senha}}\ senha;}
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_comando_i_a_conta_criar}{ComandoIAContaCriar}}()\ :\ ISConta(\textcolor{keyword}{nullptr})\ \{\};}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_comando_i_a_conta_criar}{\string~ComandoIAContaCriar}}()\ \{\textcolor{keyword}{delete}\ ISConta;\};\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_comando_i_a_conta_criar_a762c80bdf65008a9f18efe3371d055c8}{executar}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_comando_i_a_conta_atualizar}{ComandoIAContaAtualizar}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_comando_i_a_conta}{ComandoIAConta}}\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_interface_s_conta}{InterfaceSConta}}*\ ISConta;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{string}\ cpfValue,\ nomeValue,\ senhaValue;}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_conta}{Conta}}\ conta;}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_cpf}{Cpf}}\ cpf;}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_nome}{Nome}}\ nome;}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_senha}{Senha}}\ senha;}
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_comando_i_a_conta_atualizar}{ComandoIAContaAtualizar}}()\ :\ ISConta(\textcolor{keyword}{nullptr})\ \{\};}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_comando_i_a_conta_atualizar}{\string~ComandoIAContaAtualizar}}()\ \{\textcolor{keyword}{delete}\ ISConta;\};\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_comando_i_a_conta_atualizar_a250f6bea1de7e115407a5cbeb098c7ac}{executar}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_comando_i_a_conta_excluir}{ComandoIAContaExcluir}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_comando_i_a_conta}{ComandoIAConta}}\ \{}
+\DoxyCodeLine{00049\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_interface_s_conta}{InterfaceSConta}}*\ ISConta;}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{string}\ cpfValue,\ nomeValue,\ senhaValue;}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_conta}{Conta}}\ conta;}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{class_cpf}{Cpf}}\ cpf;}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_nome}{Nome}}\ nome;}
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{class_senha}{Senha}}\ senha;}
+\DoxyCodeLine{00056\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_comando_i_a_conta_excluir}{ComandoIAContaExcluir}}()\ :\ ISConta(\textcolor{keyword}{nullptr})\ \{\};}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_comando_i_a_conta_excluir}{\string~ComandoIAContaExcluir}}()\ \{\textcolor{keyword}{delete}\ ISConta;\};\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_comando_i_a_conta_excluir_a7d4873445c331cbec8dce9c546fd0af5}{executar}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_comando_i_a_conta_listar}{ComandoIAContaListar}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_comando_i_a_conta}{ComandoIAConta}}\ \{}
+\DoxyCodeLine{00064\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{class_interface_s_conta}{InterfaceSConta}}*\ ISConta;}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{string}\ cpfValue,\ nomeValue,\ senhaValue;}
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{class_conta}{Conta}}\ conta;}
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{class_cpf}{Cpf}}\ cpf;}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{class_nome}{Nome}}\ nome;}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{class_senha}{Senha}}\ senha;}
+\DoxyCodeLine{00071\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{class_comando_i_a_conta_listar}{ComandoIAContaListar}}()\ :\ ISConta(\textcolor{keyword}{nullptr})\ \{\};\ }
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{class_comando_i_a_conta_listar_a8954f35679818fa355d30c3ab0f96f5d}{\string~ComandoIAContaListar}}()\ \{\textcolor{keyword}{delete}\ ISConta;\};}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_comando_i_a_conta_listar_a4f684f511d3b0374ed46c77bbc30f581}{executar}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00075\ \};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ COMANDOS\_H\_INCLUDED}}
+
+\end{DoxyCode}

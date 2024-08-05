@@ -7,6 +7,9 @@
 
 using namespace std;
 
+/// @file FachadaTeste.h Arquivo contendo fachada para execucao de Testes.
+
+/// Declaracao de classe Fachada para centralizacao do processo de Teste.
 class FachadaTestes {
 private:
     vector<string> dominiosTeste = {"Dinheiro", "Percentual", "CodigoDePagamento",
@@ -17,6 +20,7 @@ private:
     Titulo titulo;
 
 public:
+    /// Metodo pelo qual e executado os Testes.
     void executarTestes();
 };
 

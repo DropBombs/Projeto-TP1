@@ -239,6 +239,7 @@ public:
 
 //---------------------------------------------------------------------------------------------------
 
+/// Declaracao de classe para automatizacao do processo de Teste.
 class InicializadorTestes {
 public:
     static bool autoTeste(Dominio*, UnidadeTeste*);

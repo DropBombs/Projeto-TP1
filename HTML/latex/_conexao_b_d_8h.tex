@@ -1,0 +1,38 @@
+\doxysection{Camada de Serviço/\+Banco de Dados/\+Conexao\+BD.h File Reference}
+\hypertarget{_conexao_b_d_8h}{}\label{_conexao_b_d_8h}\index{Camada de Serviço/Banco de Dados/ConexaoBD.h@{Camada de Serviço/Banco de Dados/ConexaoBD.h}}
+
+
+Arquivo contendo aplicacao de persistencia com SQLite.  
+
+
+{\ttfamily \#include "{}../../\+Entidades.\+h"{}}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$conio.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}sqlite3.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_e_erro_persistencia}{EErro\+Persistencia}}
+\begin{DoxyCompactList}\small\item\em Declaracao de classe para controle de Erro de persistencia. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_elemento_resultado}{Elemento\+Resultado}}
+\begin{DoxyCompactList}\small\item\em Declaracao de classe com comportamento relacional para BD. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_comando_s_q_l}{Comando\+SQL}}
+\begin{DoxyCompactList}\small\item\em Declaracao de classe para execucao de comandos SQL. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_comando_ler_senha}{Comando\+Ler\+Senha}}
+\begin{DoxyCompactList}\small\item\em Declaracao de classe Comando para autenticar \doxylink{class_cpf}{Cpf} e \doxylink{class_senha}{Senha} no BD. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_comando_criar_conta}{Comando\+Criar\+Conta}}
+\begin{DoxyCompactList}\small\item\em Declaracao de classe Comando para criar \doxylink{class_conta}{Conta} no BD. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_comando_atualizar_conta}{Comando\+Atualizar\+Conta}}
+\begin{DoxyCompactList}\small\item\em Declaracao de classe Comando para atualizar dados da \doxylink{class_conta}{Conta} no BD. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_comando_excluir_conta}{Comando\+Excluir\+Conta}}
+\begin{DoxyCompactList}\small\item\em Declaracao de classe Comando para excluir \doxylink{class_conta}{Conta} no BD. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_comando_listar_conta}{Comando\+Listar\+Conta}}
+\begin{DoxyCompactList}\small\item\em Declaracao de classe Comando para listar dados da \doxylink{class_conta}{Conta} no BD. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Arquivo contendo aplicacao de persistencia com SQLite. 
+

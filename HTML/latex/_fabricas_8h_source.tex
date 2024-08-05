@@ -1,5 +1,5 @@
-\doxysection{C\+:/\+Users/\+Usuario/\+Desktop/\+Duarte/\+Downloads/\+Antonio Paulo/\+Estudos/\+TP1/\+Projeto\+TP1/\+Projeto-\/\+TP1/\+Projeto-\/\+TP1/\+Fabricas.h}
-\hypertarget{_fabricas_8h_source}{}\label{_fabricas_8h_source}
+\doxysection{Fabricas.\+h}
+\hypertarget{_fabricas_8h_source}{}\label{_fabricas_8h_source}\mbox{\hyperlink{_fabricas_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FABRICAS\_H}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FABRICAS\_H}}
@@ -9,60 +9,61 @@
 \DoxyCodeLine{00006\ }
 \DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }std;}
 \DoxyCodeLine{00008\ }
-\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_fabricas}{Fabricas}}\ \{}
-\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_dominio}{Dominio}}*\ criarDominios(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&);\ \textcolor{comment}{//\ Funcao\ que\ mapeia\ o\ nome\ do\ Dominio\ a\ um\ ponteiro\ para\ ele.}}
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_unidade_teste}{UnidadeTeste}}*\ criarUnidadeTeste(\mbox{\hyperlink{class_dominio}{Dominio}}*);}
-\DoxyCodeLine{00013\ \};}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_dominio}{Dominio}}*\ Fabricas::criarDominios(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ tipo)\ \{}
-\DoxyCodeLine{00016\ \ \ \ \ map<string,\ function<\mbox{\hyperlink{class_dominio}{Dominio}}*()>>\ fabricaDominios\ =\ \{\ \ \textcolor{comment}{//\ Mapeia\ string\ a\ uma\ função\ lambda\ de\ criação\ de\ ponteiro.}}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Dinheiro"{}},\ []()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_dinheiro}{Dinheiro}}();\}\},}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Percentual"{}},\ []()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_percentual}{Percentual}}();\}\},}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}CodigoDePagamento"{}},\ []()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_codigo_de_pagamento}{CodigoDePagamento}}();\}\},}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}CodigoDeTitulo"{}},\ []()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_codigo_de_titulo}{CodigoDeTitulo}}();\}\},}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Cpf"{}},\ []()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_cpf}{Cpf}}();\}\},}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Data"{}},\ []()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_data}{Data}}();\}\},}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Estado"{}},\ []()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_estado}{Estado}}();\}\},}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Nome"{}},\ []()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_nome}{Nome}}();\}\},}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Senha"{}},\ []()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_senha}{Senha}}();\}\},}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Setor"{}},\ []()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_setor}{Setor}}();\}\}}
-\DoxyCodeLine{00027\ \ \ \ \ \};}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{auto}\ aux\ =\ fabricaDominios.find(tipo);\ \textcolor{comment}{//\ Procura\ o\ dominio\ desejado.}}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{if}\ (aux\ !=\ fabricaDominios.end())\ \{\ \ \ \ \textcolor{comment}{//\ Checa\ se\ foi\ encontrado\ o\ dominio.}}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ aux-\/>second();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Se\ sim,\ retorna\ o\ ponteiro\ criado.}}
-\DoxyCodeLine{00032\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Dominio\ não encontrado."{}}\ <<\ endl;}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Se\ não,\ retorna\ ponteiro\ nulo.}}
-\DoxyCodeLine{00035\ \ \ \ \ \};}
-\DoxyCodeLine{00036\ \};}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_unidade_teste}{UnidadeTeste}}*\ Fabricas::criarUnidadeTeste(\mbox{\hyperlink{class_dominio}{Dominio}}*\ dominio)\ \{}
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_dinheiro}{Dinheiro}}*\textcolor{keyword}{>}(dominio))}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_u_t_monetario}{UTMonetario}}(dominio);}
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_percentual}{Percentual}}*\textcolor{keyword}{>}(dominio))}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_u_t_percentual}{UTPercentual}}(dominio);}
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_codigo_de_pagamento}{CodigoDePagamento}}*\textcolor{keyword}{>}(dominio))}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_u_t_cd_pagamento}{UTCdPagamento}}(dominio);}
-\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_codigo_de_titulo}{CodigoDeTitulo}}*\textcolor{keyword}{>}(dominio))}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_u_t_cd_titulo}{UTCdTitulo}}(dominio);}
-\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_cpf}{Cpf}}*\textcolor{keyword}{>}(dominio))}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_u_t_c_p_f}{UTCPF}}(dominio);}
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_data}{Data}}*\textcolor{keyword}{>}(dominio))}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_u_t_data}{UTData}}(dominio);}
-\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_estado}{Estado}}*\textcolor{keyword}{>}(dominio))}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_u_t_estado}{UTEstado}}(dominio);}
-\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_nome}{Nome}}*\textcolor{keyword}{>}(dominio))}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_u_t_nome}{UTNome}}(dominio);}
-\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_senha}{Senha}}*\textcolor{keyword}{>}(dominio))}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_u_t_senha}{UTSenha}}(dominio);}
-\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_setor}{Setor}}*\textcolor{keyword}{>}(dominio))}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_u_t_setor}{UTSetor}}(dominio);}
-\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00061\ \};}
-\DoxyCodeLine{00062\ }
-\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FABRICAS\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_fabricas}{Fabricas}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_dominio}{Dominio}}*\ criarDominios(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&);\ \textcolor{comment}{//\ Funcao\ que\ mapeia\ o\ nome\ do\ Dominio\ a\ um\ ponteiro\ para\ ele.}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_unidade_teste}{UnidadeTeste}}*\ criarUnidadeTeste(\mbox{\hyperlink{class_dominio}{Dominio}}*);}
+\DoxyCodeLine{00016\ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_dominio}{Dominio}}*\ Fabricas::criarDominios(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ tipo)\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ map<string,\ function<\mbox{\hyperlink{class_dominio}{Dominio}}*()>>\ fabricaDominios\ =\ \{\ \ \textcolor{comment}{//\ Mapeia\ string\ a\ uma\ função\ lambda\ de\ criação\ de\ ponteiro.}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Dinheiro"{}},\ []()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_dinheiro}{Dinheiro}}();\}\},}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Percentual"{}},\ []()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_percentual}{Percentual}}();\}\},}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}CodigoDePagamento"{}},\ []()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_codigo_de_pagamento}{CodigoDePagamento}}();\}\},}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}CodigoDeTitulo"{}},\ []()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_codigo_de_titulo}{CodigoDeTitulo}}();\}\},}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Cpf"{}},\ []()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_cpf}{Cpf}}();\}\},}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Data"{}},\ []()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_data}{Data}}();\}\},}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Estado"{}},\ []()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_estado}{Estado}}();\}\},}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Nome"{}},\ []()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_nome}{Nome}}();\}\},}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Senha"{}},\ []()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_senha}{Senha}}();\}\},}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \{\textcolor{stringliteral}{"{}Setor"{}},\ []()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_setor}{Setor}}();\}\}}
+\DoxyCodeLine{00030\ \ \ \ \ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{auto}\ aux\ =\ fabricaDominios.find(tipo);\ \textcolor{comment}{//\ Procura\ o\ dominio\ desejado.}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{if}\ (aux\ !=\ fabricaDominios.end())\ \{\ \ \ \ \textcolor{comment}{//\ Checa\ se\ foi\ encontrado\ o\ dominio.}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ aux-\/>second();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Se\ sim,\ retorna\ o\ ponteiro\ criado.}}
+\DoxyCodeLine{00035\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Dominio\ não encontrado."{}}\ <<\ endl;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Se\ não,\ retorna\ ponteiro\ nulo.}}
+\DoxyCodeLine{00038\ \ \ \ \ \};}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_unidade_teste}{UnidadeTeste}}*\ Fabricas::criarUnidadeTeste(\mbox{\hyperlink{class_dominio}{Dominio}}*\ dominio)\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_dinheiro}{Dinheiro}}*\textcolor{keyword}{>}(dominio))}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_u_t_monetario}{UTMonetario}}(dominio);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_percentual}{Percentual}}*\textcolor{keyword}{>}(dominio))}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_u_t_percentual}{UTPercentual}}(dominio);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_codigo_de_pagamento}{CodigoDePagamento}}*\textcolor{keyword}{>}(dominio))}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_u_t_cd_pagamento}{UTCdPagamento}}(dominio);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_codigo_de_titulo}{CodigoDeTitulo}}*\textcolor{keyword}{>}(dominio))}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_u_t_cd_titulo}{UTCdTitulo}}(dominio);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_cpf}{Cpf}}*\textcolor{keyword}{>}(dominio))}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_u_t_c_p_f}{UTCPF}}(dominio);}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_data}{Data}}*\textcolor{keyword}{>}(dominio))}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_u_t_data}{UTData}}(dominio);}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_estado}{Estado}}*\textcolor{keyword}{>}(dominio))}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_u_t_estado}{UTEstado}}(dominio);}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_nome}{Nome}}*\textcolor{keyword}{>}(dominio))}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_u_t_nome}{UTNome}}(dominio);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_senha}{Senha}}*\textcolor{keyword}{>}(dominio))}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_u_t_senha}{UTSenha}}(dominio);}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_setor}{Setor}}*\textcolor{keyword}{>}(dominio))}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_u_t_setor}{UTSetor}}(dominio);}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FABRICAS\_H}}
 
 \end{DoxyCode}

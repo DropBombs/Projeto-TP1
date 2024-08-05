@@ -4,12 +4,14 @@
 #include "../Camada de Serviço/Banco de Dados/ConexaoBD.h"
 #include "../Comandos.h"
 
-/// Declaracao de classe Controladora que realiza interface de Autenticacao na Camada de Apresentacao.
-class CntrlAprInicial {
+/// @file ControladorasApr.h Arquivo contendo as Controladoras da Camada de Apresentacao.
+
+/// Declaracao de classe Controladora para tela inicial.
+
+class CntrlAprInicial { // 190084499
 private:
     InterfaceAAut* IAAut;
     InterfaceAConta* IAConta;
-    // InterfaceAInvestimento* IAInv;
     static const short SAIR         = 0;
     static const short AUTENTICAR   = 1;
     static const short CONTA        = 1;
@@ -17,10 +19,13 @@ private:
     static const short INVESTIMENTO = 2;
     short inputUsuario;
 public:
+    /// Construtor onde se inicia o programa.
     CntrlAprInicial();
-    ~CntrlAprInicial();
+    ~CntrlAprInicial(); /// Metodo para tela auxiliar pos autenticacao de usuario.
     void telaUsuario();
 };
+
+/// Declaracao de classe Controladora que realiza interface de Autenticacao na Camada de Apresentacao.
 
 class CntrlAAut : public InterfaceAAut { // 190084499
 private:
@@ -29,7 +34,6 @@ private:
     string cpfValue;
     Senha senha;
     Cpf cpf;
-    bool resultadoAut;
 public:
     CntrlAAut() : ISAut(nullptr) {};
     ~CntrlAAut() {delete ISAut;};
@@ -41,24 +45,21 @@ public:
 
 class ComandoIAConta;
 
-class CntrlAConta : public InterfaceAConta {
+/// Declaracao de classe Controladora que realiza interface de Contas na Camada de Apresentacao.
+
+class CntrlAConta : public InterfaceAConta { // 190084499
 private:
     ComandoIAConta* comando;
     static const short SAIR      = 0;
-    static const short RECUPERAR = 1;
+    static const short LISTAR    = 1;
     static const short ATUALIZAR = 2;
     static const short EXCLUIR   = 3;
-    static const short ERRO      = -1;
 public:
-    void criar() override;
+    /// Metodo para criacao de Conta.
+    void criar() override; /// Metodo para assumir o controle do fluxo do programa.
     void executar() override;
 };
 
 //---------------------------------------------------------------------------------------------------
 
-/*
-class CntrlAInv : public InterfaceAInv {
-public:
-
-*/
 #endif // CONTROLADORASAPR_H_INCLUDED

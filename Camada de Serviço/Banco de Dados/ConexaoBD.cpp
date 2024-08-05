@@ -92,3 +92,19 @@ string ComandoLerSenha::getResultado() {
         return resultado.getValorColuna();
 };
 
+ComandoCriarConta::ComandoCriarConta(Conta conta) {
+    comandoSQL = "INSERT INTO conta (cpf, nome, senha) VALUES ('" + conta.getCpf().getValor() + "', '" + conta.getNome().getValor() + "', '" + conta.getSenha().getValor() + "');";
+}
+
+// Implementação do método ComandoAtualizarConta.
+ComandoAtualizarConta::ComandoAtualizarConta(Conta conta) {
+    comandoSQL = "UPDATE conta SET nome = '" + conta.getNome().getValor() + "', senha = '" + conta.getSenha().getValor() + "' WHERE cpf = '" + conta.getCpf().getValor() + "';";
+}
+
+ComandoExcluirConta::ComandoExcluirConta(Conta conta) {
+    comandoSQL = "DELETE FROM conta WHERE cpf = '" + conta.getCpf().getValor() + "';";
+}
+
+ComandoListarConta::ComandoListarConta(Conta conta) {
+    comandoSQL = "SELECT * FROM conta WHERE cpf = '" + conta.getCpf().getValor() + "';";
+}

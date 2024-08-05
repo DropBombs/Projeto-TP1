@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Projeto TP1: C:/Users/Usuario/Desktop/Duarte/Downloads/Antonio Paulo/Estudos/TP1/ProjetoTP1/Projeto-TP1/Projeto-TP1/ControladorasServico.h Source File</title>
+<title>Projeto TP1: Camada de Serviço/ControladorasServico.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -56,8 +56,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="doc-content">
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function(){ initResizable(false); });
@@ -84,65 +82,38 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_1300efeaf2573542ce9bdf07d1280572.html">Camada de Serviço</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
-  <div class="headertitle"><div class="title">C:/Users/Usuario/Desktop/Duarte/Downloads/Antonio Paulo/Estudos/TP1/ProjetoTP1/Projeto-TP1/Projeto-TP1/ControladorasServico.h</div></div>
+  <div class="headertitle"><div class="title">ControladorasServico.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef CONTROLADORASSERVICO_H_INCLUDED</span></div>
+<a href="_controladoras_servico_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef CONTROLADORASSERVICO_H_INCLUDED</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define CONTROLADORASSERVICO_H_INCLUDED</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;Interfaces.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_interfaces_8h.html">../Interfaces.h</a>&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_cntrl_s_aut.html">    5</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cntrl_s_aut.html">CntrlSAut</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_interface_s_aut.html">InterfaceSAut</a> {</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keywordtype">bool</span> autenticar(<a class="code hl_class" href="class_cpf.html">Cpf</a>, <a class="code hl_class" href="class_senha.html">Senha</a>) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>};</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_cntrl_s_conta.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cntrl_s_conta.html">CntrlSConta</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_interface_s_conta.html">InterfaceSConta</a> {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordtype">bool</span> criar(<a class="code hl_class" href="class_conta.html">Conta</a>) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">bool</span> recuperar(<a class="code hl_class" href="class_conta.html">Conta</a>*) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">bool</span> atualizar(<a class="code hl_class" href="class_conta.html">Conta</a>) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">bool</span> excluir(<a class="code hl_class" href="class_cpf.html">Cpf</a>) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    vector&lt;Conta&gt; listarTodasContas();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>};</div>
 </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_cntrl_s_conta.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cntrl_s_conta.html">CntrlSConta</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_interface_s_conta.html">InterfaceSConta</a> {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">bool</span> criar(<a class="code hl_class" href="class_conta.html">Conta</a>) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">bool</span> recuperar(<a class="code hl_class" href="class_conta.html">Conta</a>*) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">bool</span> atualizar(<a class="code hl_class" href="class_conta.html">Conta</a>) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">bool</span> excluir(<a class="code hl_class" href="class_cpf.html">Cpf</a>) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>};</div>
-</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_cntrl_s_titulo.html">   18</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cntrl_s_titulo.html">CntrlSTitulo</a> : <span class="keyword">public</span> InterfaceSTitulo {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">bool</span> criar(<a class="code hl_class" href="class_titulo.html">Titulo</a>) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">bool</span> recuperar(<a class="code hl_class" href="class_titulo.html">Titulo</a>*) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">bool</span> atualizar(<a class="code hl_class" href="class_titulo.html">Titulo</a>) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">bool</span> excluir(<a class="code hl_class" href="class_codigo_de_titulo.html">CodigoDeTitulo</a>) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>};</div>
-</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_cntrl_s_pagamento.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cntrl_s_pagamento.html">CntrlSPagamento</a> : <span class="keyword">public</span> InterfaceSPagamento {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> criar(<a class="code hl_class" href="class_pagamento.html">Pagamento</a>) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> recuperar(<a class="code hl_class" href="class_pagamento.html">Pagamento</a>*) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> atualizar(<a class="code hl_class" href="class_pagamento.html">Pagamento</a>) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> excluir(<a class="code hl_class" href="class_codigo_de_pagamento.html">CodigoDePagamento</a>) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>};</div>
-</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#endif </span><span class="comment">// CONTROLADORASSERVICO_H_INCLUDED</span></div>
-<div class="ttc" id="aclass_cntrl_s_aut_html"><div class="ttname"><a href="class_cntrl_s_aut.html">CntrlSAut</a></div><div class="ttdef"><b>Definition</b> ControladorasServico.h:5</div></div>
-<div class="ttc" id="aclass_cntrl_s_conta_html"><div class="ttname"><a href="class_cntrl_s_conta.html">CntrlSConta</a></div><div class="ttdef"><b>Definition</b> ControladorasServico.h:10</div></div>
-<div class="ttc" id="aclass_cntrl_s_pagamento_html"><div class="ttname"><a href="class_cntrl_s_pagamento.html">CntrlSPagamento</a></div><div class="ttdef"><b>Definition</b> ControladorasServico.h:26</div></div>
-<div class="ttc" id="aclass_cntrl_s_titulo_html"><div class="ttname"><a href="class_cntrl_s_titulo.html">CntrlSTitulo</a></div><div class="ttdef"><b>Definition</b> ControladorasServico.h:18</div></div>
-<div class="ttc" id="aclass_codigo_de_pagamento_html"><div class="ttname"><a href="class_codigo_de_pagamento.html">CodigoDePagamento</a></div><div class="ttdoc">Dominio requerido pelas especificacoes.</div><div class="ttdef"><b>Definition</b> Dominios.h:63</div></div>
-<div class="ttc" id="aclass_codigo_de_titulo_html"><div class="ttname"><a href="class_codigo_de_titulo.html">CodigoDeTitulo</a></div><div class="ttdoc">Dominio requerido pelas especificacoes.</div><div class="ttdef"><b>Definition</b> Dominios.h:75</div></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#endif </span><span class="comment">// CONTROLADORASSERVICO_H_INCLUDED</span></div>
+<div class="ttc" id="a_interfaces_8h_html"><div class="ttname"><a href="_interfaces_8h.html">Interfaces.h</a></div><div class="ttdoc">Arquivo contendo as Interfaces entre modulos.</div></div>
+<div class="ttc" id="aclass_cntrl_s_conta_html"><div class="ttname"><a href="class_cntrl_s_conta.html">CntrlSConta</a></div><div class="ttdoc">Declaracao de classe Controladora que realize interface de Contas na Camada de Servico.</div><div class="ttdef"><b>Definition</b> ControladorasServico.h:8</div></div>
 <div class="ttc" id="aclass_conta_html"><div class="ttname"><a href="class_conta.html">Conta</a></div><div class="ttdoc">Entidade requerida, instanciando os Dominios definidos.</div><div class="ttdef"><b>Definition</b> Entidades.h:71</div></div>
 <div class="ttc" id="aclass_cpf_html"><div class="ttname"><a href="class_cpf.html">Cpf</a></div><div class="ttdoc">Dominio requerido pelas especificacoes.</div><div class="ttdef"><b>Definition</b> Dominios.h:88</div></div>
-<div class="ttc" id="aclass_interface_s_aut_html"><div class="ttname"><a href="class_interface_s_aut.html">InterfaceSAut</a></div><div class="ttdef"><b>Definition</b> Interfaces.h:31</div></div>
-<div class="ttc" id="aclass_interface_s_conta_html"><div class="ttname"><a href="class_interface_s_conta.html">InterfaceSConta</a></div><div class="ttdef"><b>Definition</b> Interfaces.h:37</div></div>
-<div class="ttc" id="aclass_pagamento_html"><div class="ttname"><a href="class_pagamento.html">Pagamento</a></div><div class="ttdoc">Entidade requerida, instanciando os Dominios definidos.</div><div class="ttdef"><b>Definition</b> Entidades.h:21</div></div>
-<div class="ttc" id="aclass_senha_html"><div class="ttname"><a href="class_senha.html">Senha</a></div><div class="ttdoc">Dominio requerido pelas especificacoes.</div><div class="ttdef"><b>Definition</b> Dominios.h:145</div></div>
-<div class="ttc" id="aclass_titulo_html"><div class="ttname"><a href="class_titulo.html">Titulo</a></div><div class="ttdoc">Entidade requerida, instanciando os Dominios definidos.</div><div class="ttdef"><b>Definition</b> Entidades.h:43</div></div>
+<div class="ttc" id="aclass_interface_s_conta_html"><div class="ttname"><a href="class_interface_s_conta.html">InterfaceSConta</a></div><div class="ttdoc">Interface de Servico para Contas.</div><div class="ttdef"><b>Definition</b> Interfaces.h:38</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

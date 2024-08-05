@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Projeto TP1: C:/Users/Usuario/Desktop/Duarte/Downloads/Antonio Paulo/Estudos/TP1/ProjetoTP1/Projeto-TP1/Projeto-TP1/ControladorasApr.h Source File</title>
+<title>Projeto TP1: Camada de Apresentação/ControladorasApr.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -56,8 +56,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="doc-content">
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function(){ initResizable(false); });
@@ -84,39 +82,96 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c9d91da3fe2c7f01c826f6e15dd0a235.html">Camada de Apresentação</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
-  <div class="headertitle"><div class="title">C:/Users/Usuario/Desktop/Duarte/Downloads/Antonio Paulo/Estudos/TP1/ProjetoTP1/Projeto-TP1/Projeto-TP1/ControladorasApr.h</div></div>
+  <div class="headertitle"><div class="title">ControladorasApr.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef CONTROLADORASAPR_H_INCLUDED</span></div>
+<a href="_controladoras_apr_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef CONTROLADORASAPR_H_INCLUDED</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define CONTROLADORASAPR_H_INCLUDED</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;Interfaces.h&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_cntrl_a_aut.html">    5</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cntrl_a_aut.html">CntrlAAut</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_interface_a_aut.html">InterfaceAAut</a> {</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keywordtype">bool</span> autenticar(<a class="code hl_class" href="class_cpf.html">Cpf</a>*) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_interfaces_8h.html">../Interfaces.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;../Camada de Servi�o/Banco de Dados/ConexaoBD.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="_comandos_8h.html">../Comandos.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>};</div>
-</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_cntrl_a_conta.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cntrl_a_conta.html">CntrlAConta</a> : <span class="keyword">public</span> InterfaceAConta {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">void</span> criar() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">int</span> executar(<a class="code hl_class" href="class_cpf.html">Cpf</a>) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>};</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_cntrl_apr_inicial.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cntrl_apr_inicial.html">CntrlAprInicial</a> { <span class="comment">// 190084499</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_class" href="class_interface_a_aut.html">InterfaceAAut</a>* IAAut;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_class" href="class_interface_a_conta.html">InterfaceAConta</a>* IAConta;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">short</span> SAIR         = 0;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">short</span> AUTENTICAR   = 1;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">short</span> CONTA        = 1;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">short</span> CRIAR        = 2;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">short</span> INVESTIMENTO = 2;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">short</span> inputUsuario;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_function" href="class_cntrl_apr_inicial.html#a386d01a095f7d2983aeeca9b89c31038">CntrlAprInicial</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_class" href="class_cntrl_apr_inicial.html">~CntrlAprInicial</a>(); </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntrl_apr_inicial.html#a0d8940d38062ef5662aa190bbf40de47">telaUsuario</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>};</div>
 </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">class </span>CntrlAInv : <span class="keyword">public</span> InterfaceAInv {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#endif </span><span class="comment">// CONTROLADORASAPR_H_INCLUDED</span></div>
-<div class="ttc" id="aclass_cntrl_a_aut_html"><div class="ttname"><a href="class_cntrl_a_aut.html">CntrlAAut</a></div><div class="ttdoc">Declaracao de classe Controladora que realiza interface de Autenticacao na Camada de Apresentacao.</div><div class="ttdef"><b>Definition</b> ControladorasApr.h:5</div></div>
-<div class="ttc" id="aclass_cntrl_a_conta_html"><div class="ttname"><a href="class_cntrl_a_conta.html">CntrlAConta</a></div><div class="ttdef"><b>Definition</b> ControladorasApr.h:11</div></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_cntrl_a_aut.html">   30</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cntrl_a_aut.html">CntrlAAut</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_interface_a_aut.html">InterfaceAAut</a> { <span class="comment">// 190084499</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_class" href="class_interface_s_aut.html">InterfaceSAut</a>* ISAut;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">string</span> senhaValue;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">string</span> cpfValue;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_class" href="class_senha.html">Senha</a> senha;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_class" href="class_cpf.html">Cpf</a> cpf;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_class" href="class_cntrl_a_aut.html">CntrlAAut</a>() : ISAut(<span class="keyword">nullptr</span>) {};</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_class" href="class_cntrl_a_aut.html">~CntrlAAut</a>() {<span class="keyword">delete</span> ISAut;};</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">bool</span> autenticar() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
+</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">class </span><a class="code hl_class" href="class_comando_i_a_conta.html">ComandoIAConta</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="};">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_cntrl_a_conta.html">   50</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cntrl_a_conta.html">CntrlAConta</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_interface_a_conta.html">InterfaceAConta</a> { <span class="comment">// 190084499</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_class" href="class_comando_i_a_conta.html">ComandoIAConta</a>* comando;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">short</span> SAIR      = 0;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">short</span> LISTAR    = 1;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">short</span> ATUALIZAR = 2;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">short</span> EXCLUIR   = 3;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntrl_a_conta.html#a8815db12f7849fe3e91f3c1a0f555ba5">criar</a>() <span class="keyword">override</span>; </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntrl_a_conta.html#a6175d8f424a31a69db0058a8d5acec9b">executar</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>};</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">//---------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#endif </span><span class="comment">// CONTROLADORASAPR_H_INCLUDED</span></div>
+<div class="ttc" id="a_comandos_8h_html"><div class="ttname"><a href="_comandos_8h.html">Comandos.h</a></div><div class="ttdoc">Arquivo contendo as classes Comando para direcionar o fluxo do programa.</div></div>
+<div class="ttc" id="a_interfaces_8h_html"><div class="ttname"><a href="_interfaces_8h.html">Interfaces.h</a></div><div class="ttdoc">Arquivo contendo as Interfaces entre modulos.</div></div>
+<div class="ttc" id="aclass_cntrl_a_aut_html"><div class="ttname"><a href="class_cntrl_a_aut.html">CntrlAAut</a></div><div class="ttdoc">Declaracao de classe Controladora que realiza interface de Autenticacao na Camada de Apresentacao.</div><div class="ttdef"><b>Definition</b> ControladorasApr.h:30</div></div>
+<div class="ttc" id="aclass_cntrl_a_conta_html"><div class="ttname"><a href="class_cntrl_a_conta.html">CntrlAConta</a></div><div class="ttdoc">Declaracao de classe Controladora que realiza interface de Contas na Camada de Apresentacao.</div><div class="ttdef"><b>Definition</b> ControladorasApr.h:50</div></div>
+<div class="ttc" id="aclass_cntrl_a_conta_html_a6175d8f424a31a69db0058a8d5acec9b"><div class="ttname"><a href="class_cntrl_a_conta.html#a6175d8f424a31a69db0058a8d5acec9b">CntrlAConta::executar</a></div><div class="ttdeci">void executar() override</div><div class="ttdoc">Metodo para assumir o controle do fluxo do programa.</div><div class="ttdef"><b>Definition</b> ControladorasApr.cpp:113</div></div>
+<div class="ttc" id="aclass_cntrl_a_conta_html_a8815db12f7849fe3e91f3c1a0f555ba5"><div class="ttname"><a href="class_cntrl_a_conta.html#a8815db12f7849fe3e91f3c1a0f555ba5">CntrlAConta::criar</a></div><div class="ttdeci">void criar() override</div><div class="ttdoc">Metodo para criacao de Conta.</div><div class="ttdef"><b>Definition</b> ControladorasApr.cpp:108</div></div>
+<div class="ttc" id="aclass_cntrl_apr_inicial_html"><div class="ttname"><a href="class_cntrl_apr_inicial.html">CntrlAprInicial</a></div><div class="ttdoc">Declaracao de classe Controladora para tela inicial.</div><div class="ttdef"><b>Definition</b> ControladorasApr.h:11</div></div>
+<div class="ttc" id="aclass_cntrl_apr_inicial_html_a0d8940d38062ef5662aa190bbf40de47"><div class="ttname"><a href="class_cntrl_apr_inicial.html#a0d8940d38062ef5662aa190bbf40de47">CntrlAprInicial::telaUsuario</a></div><div class="ttdeci">void telaUsuario()</div><div class="ttdoc">Metodo para tela auxiliar pos autenticacao de usuario.</div><div class="ttdef"><b>Definition</b> ControladorasApr.cpp:40</div></div>
+<div class="ttc" id="aclass_cntrl_apr_inicial_html_a386d01a095f7d2983aeeca9b89c31038"><div class="ttname"><a href="class_cntrl_apr_inicial.html#a386d01a095f7d2983aeeca9b89c31038">CntrlAprInicial::CntrlAprInicial</a></div><div class="ttdeci">CntrlAprInicial()</div><div class="ttdoc">Construtor onde se inicia o programa.</div><div class="ttdef"><b>Definition</b> ControladorasApr.cpp:5</div></div>
+<div class="ttc" id="aclass_comando_i_a_conta_html"><div class="ttname"><a href="class_comando_i_a_conta.html">ComandoIAConta</a></div><div class="ttdoc">Declaracao de classe abstrata para polimorfismo do Comando adequado.</div><div class="ttdef"><b>Definition</b> Comandos.h:11</div></div>
 <div class="ttc" id="aclass_cpf_html"><div class="ttname"><a href="class_cpf.html">Cpf</a></div><div class="ttdoc">Dominio requerido pelas especificacoes.</div><div class="ttdef"><b>Definition</b> Dominios.h:88</div></div>
-<div class="ttc" id="aclass_interface_a_aut_html"><div class="ttname"><a href="class_interface_a_aut.html">InterfaceAAut</a></div><div class="ttdef"><b>Definition</b> Interfaces.h:7</div></div>
+<div class="ttc" id="aclass_interface_a_aut_html"><div class="ttname"><a href="class_interface_a_aut.html">InterfaceAAut</a></div><div class="ttdoc">Interface de Apresentacao para Autenticacao.</div><div class="ttdef"><b>Definition</b> Interfaces.h:10</div></div>
+<div class="ttc" id="aclass_interface_a_conta_html"><div class="ttname"><a href="class_interface_a_conta.html">InterfaceAConta</a></div><div class="ttdoc">Interface de Apresentacao para Contas.</div><div class="ttdef"><b>Definition</b> Interfaces.h:18</div></div>
+<div class="ttc" id="aclass_interface_s_aut_html"><div class="ttname"><a href="class_interface_s_aut.html">InterfaceSAut</a></div><div class="ttdoc">Interface de Servico para Autenticacao.</div><div class="ttdef"><b>Definition</b> Interfaces.h:31</div></div>
+<div class="ttc" id="aclass_senha_html"><div class="ttname"><a href="class_senha.html">Senha</a></div><div class="ttdoc">Dominio requerido pelas especificacoes.</div><div class="ttdef"><b>Definition</b> Dominios.h:145</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

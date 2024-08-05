@@ -41,7 +41,6 @@
 		<Unit filename="Camada de Serviço/Banco de Dados/trabalho2db.db" />
 		<Unit filename="Camada de Serviço/ControladorasServico.cpp" />
 		<Unit filename="Camada de Serviço/ControladorasServico.h" />
-		<Unit filename="Camada de Serviço/Stubs.h" />
 		<Unit filename="Comandos.cpp" />
 		<Unit filename="Comandos.h" />
 		<Unit filename="Dominios.cpp" />
@@ -54,6 +53,7 @@
 		<Unit filename="Teste.cpp" />
 		<Unit filename="Teste.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="trabalho2db.db" />
 		<Extensions>
 			<DoxyBlocks>
 				<comment_style block="2" line="2" />

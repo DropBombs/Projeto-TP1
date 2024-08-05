@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['entidades_2eh_0',['Entidades.h',['../_entidades_8h.html',1,'']]]
+  ['dominios_2eh_0',['Dominios.h',['../_dominios_8h.html',1,'']]]
 ];
