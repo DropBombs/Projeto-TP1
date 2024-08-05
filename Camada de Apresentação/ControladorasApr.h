@@ -1,11 +1,10 @@
 #ifndef CONTROLADORASAPR_H_INCLUDED
 #define CONTROLADORASAPR_H_INCLUDED
 #include "../Interfaces.h"
-#include "../Camada de Serviço/Stubs.h"
+#include "../Camada de Serviço/Banco de Dados/ConexaoBD.h"
 #include "../Comandos.h"
 
 /// Declaracao de classe Controladora que realiza interface de Autenticacao na Camada de Apresentacao.
-
 class CntrlAprInicial {
 private:
     InterfaceAAut* IAAut;
@@ -32,13 +31,15 @@ private:
     Cpf cpf;
     bool resultadoAut;
 public:
-    CntrlAAut() : ISAut(new StubSAut()) {};
+    CntrlAAut() : ISAut(nullptr) {};
     ~CntrlAAut() {delete ISAut;};
     bool autenticar() override;
 
 };
 
 //---------------------------------------------------------------------------------------------------
+
+class ComandoIAConta;
 
 class CntrlAConta : public InterfaceAConta {
 private:

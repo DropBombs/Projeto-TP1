@@ -2,6 +2,8 @@
 #define COMANDOS_H_INCLUDED
 #include "Camada de Apresentação/ControladorasApr.h"
 
+using namespace std;
+
 class ComandoIAConta {
 public:
     virtual ~ComandoIAConta() = default;
@@ -17,43 +19,8 @@ private:
     Nome nome;
     Senha senha;
 public:
-    ComandoIAContaCriar() : ISConta(new StubSConta()) {};
+    ComandoIAContaCriar() : ISConta(nullptr) {};
     void executar() override;
-};
-
-
-inline void ComandoIAContaCriar::executar() {
-    string inputUsuario;
-    bool resultadoConta;
-
-    cout << "--- Criacao de Conta ---" << endl;
-    cout << "Digite o CPF: ";
-    cin >> cpfValue;
-    cout << "Digite seu Nome: ";
-    cin >> nomeValue;
-    cout << "Digite sua senha: ";
-    cin >> senhaValue;
-    while (true) {
-        try {
-            cpf.setValor(cpfValue);
-            nome.setValor(nomeValue);
-            senha.setValor(senhaValue);
-            conta.setCpf(cpf);
-            conta.setNome(nome);
-            conta.setSenha(senha);
-
-        } catch (std::invalid_argument& excecao) {
-            cout << "Tentar novamente? [S]/[N]" << endl;
-            cin >> inputUsuario;
-            if (inputUsuario != "S")
-                break;
-        };
-    };
-
-    resultadoConta = ISConta->criar(conta);
-    if (resultadoConta)
-        cout << "Sucesso na criacao da Conta." << endl;
-
 };
 
 #endif // COMANDOS_H_INCLUDED

@@ -5,14 +5,12 @@
 int main() {
 
     // Executando testes.
-    FachadaTestes fachada;
-    fachada.executarTestes();
+    //FachadaTestes fachada;
+    //fachada.executarTestes();
 
     // Início do programa.
 
     CntrlAprInicial();
-
-    cout << "Obrigado pela preferencia.";
 
     return 0;
 }

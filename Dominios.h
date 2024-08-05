@@ -88,7 +88,7 @@ public:
 class Cpf : public Dominio { // 200060422
 private:
         string cpfValue;
-        static constexpr unsigned short TAMANHO = 14;
+        static constexpr unsigned short TAMANHO = 11    ;
 public:
         void validar(string valor) override;
         void setValor(string valor) override;

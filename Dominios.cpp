@@ -86,15 +86,11 @@ void Cpf::setValor(string valor) {
 };
 
 void Cpf::validar(string valor) {
+    valor.erase(remove_if(valor.begin(), valor.end(), [](char c) { return c == '.' || c == '-'; }), valor.end());
+
     if (valor.size() < TAMANHO || valor.size() > TAMANHO)
         throw invalid_argument("Tamanho do CPF inválido");
 
-    regex formatoCpf("^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$");
-
-    if (!regex_match(valor, formatoCpf))
-        throw invalid_argument("Formato do CPF inválido");
-
-    valor.erase(remove_if(valor.begin(), valor.end(), [](char c) { return c == '.' || c == '-'; }), valor.end());
     int soma = 0;
     int multiplicador = 10;
     for (int i = 0; i < 9; ++i) {

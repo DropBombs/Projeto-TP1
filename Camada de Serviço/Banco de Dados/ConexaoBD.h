@@ -1,6 +1,5 @@
 #ifndef CONEXAOBD_H_INCLUDED
 #define CONEXAOBD_H_INCLUDED
-#include "../../Dominios.h"
 #include "../../Entidades.h"
 #include <list>
 #include <iostream>
@@ -18,7 +17,7 @@ private:
         string mensagem;
 public:
         EErroPersistencia(string);
-        string what();
+        string what() const;
 };
 //---------------------------------------------------------------------------
 // Declaração da classe ElementoResultado.
@@ -44,7 +43,7 @@ private:
         int rc;
         void conectar();
         void desconectar();
-        static int callback(void *, int, char **, char **);
+        static int callback(void *NotUsed, int argc, char **valorColuna, char **nomeColuna);
 
 protected:
         static list<ElementoResultado> listaResultado;
@@ -63,14 +62,7 @@ public:
         ComandoLerSenha(Cpf);
         string getResultado();
 };
-//---------------------------------------------------------------------------
-//Classe ComandoPesquisarCpf.
 
-class ComandoPesquisarCpf : public ComandoSQL {
-public:
-        ComandoPesquisarCpf(Cpf);
-        Conta getResultado();
-};
 //---------------------------------------------------------------------------
 // Implementações de métodos.
 
@@ -80,7 +72,6 @@ inline string ElementoResultado::getNomeColuna() const {
 
 inline string ElementoResultado::getValorColuna() const {
         return valorColuna;
-}
-
+};
 
 #endif // CONEXAOBD_H_INCLUDED
